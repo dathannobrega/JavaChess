@@ -4,61 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/badlogic.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/squad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/King.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/Knight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/Pawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/Piece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/builders/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop/src/com/javachess/DesktopLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Pawn movement rules">
+      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/action/Verification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaChess.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/Bishop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/King.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/Knight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/Pawn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/Piece.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/PieceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/Queen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/pieces/Rook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/black_bishop.png.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/black_bishop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/black_king.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/black_king.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/black_knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/black_knight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/black_pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/black_pawn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/black_queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/black_queen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/black_rook.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/black_rook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/white_bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/white_bishop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/white_king.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/white_king.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/white_knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/white_knight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/white_pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/white_pawn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/white_queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/white_queen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/white_rook.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/piece/white_rook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,12 +42,47 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="JavaChess" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="core" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="desktop" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="desktop" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="desktop" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="desktop" type="2d1252cf:ModuleNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,29 +95,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\datha\IdeaProjects\JavaChess\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.JavaChess [dependencies]">
+  <component name="RunManager" selected="Gradle.JavaChess:desktop [run]">
     <configuration name="JavaChess [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -242,8 +230,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.JavaChess [dependencies]" />
         <item itemvalue="Gradle.JavaChess:desktop [run]" />
+        <item itemvalue="Gradle.JavaChess [dependencies]" />
         <item itemvalue="Gradle.JavaChess:desktop [buildEnvironment]" />
         <item itemvalue="Gradle.JavaChess:desktop [testClasses]" />
         <item itemvalue="Gradle.JavaChess:desktop [buildDependents]" />
@@ -259,6 +247,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685673126665</updated>
       <workItem from="1685673127977" duration="2988000" />
+      <workItem from="1685743484365" duration="2382000" />
     </task>
     <servers />
   </component>

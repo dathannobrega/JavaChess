@@ -7,7 +7,7 @@ import pieces.Piece;
 
 //classe sera usada para "coletar os clcks da nossa interface."
 //baseado em: https://libgdx.com/wiki/input/event-handling
-public abstract class ChessInputProcessor implements InputProcessor {
+public abstract class ChessInputProcessor implements InputProcessor,Verification {
     private static final float CELL_SIZE = 100f;
     private OrthographicCamera camera;
     private Piece[][]pieces;
@@ -33,22 +33,7 @@ public abstract class ChessInputProcessor implements InputProcessor {
     }
 
     @Override
-    public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-            int getX, getY;
-            if(Gdx.input.isTouched()){
-                getX = (int) Gdx.input.getX()/100;
-                getY = (int) Gdx.input.getY()/100;
-
-                for (Piece peca[] : pieces) {
-                    for(int cont = 0; cont < 8; cont++){
-                        if(peca[cont].getPosX()/100 == getX && peca[cont].getPosY()/100 == getY){
-                            System.out.println("Cliquei na peca" + peca[cont].getColor());
-                        }
-                    }
-
-                }
-            }
-        return false;
+    public boolean touchDown(int screenX, int screenY, int pointer, int button) { return true;
     }
 
     @Override
@@ -77,5 +62,18 @@ public abstract class ChessInputProcessor implements InputProcessor {
 
     public void setPieces(Piece[][] pieces) {
         this.pieces = pieces;
+    }
+
+    @Override
+    public boolean verifyEntity(Piece peca, int x, int y) {
+        if(pieces[x][y] == null){ // se a posição estiver vazia ele me retorna true
+            return true;
+        }
+        if(pieces[x][y].getColor() == peca.getColor()){
+            System.out.println("vc nao pode matar um amigo");
+            return false;
+        } else{
+            return true;
+        }
     }
 }

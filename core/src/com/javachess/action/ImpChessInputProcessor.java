@@ -34,7 +34,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                     for (int j = 0; j < 8; j++) {
                         if (pieces[i][j] != null)
                             if (pieces[i][j] == selectedPiece){ // faz um comparativo para achar a peca selecionada anteriormente
-                                if(pieces[i][j].validMov(getX,getY)){
+                                if(pieces[i][j].validMov(getX,getY) && this.verifyEntity(selectedPiece,getX,getY)){
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
                                     //Aqui vai ficar um observer para coletar os logs
@@ -53,6 +53,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
         }
         return false;
     }
+
 
     //ESSA FUNÇÂO QUE VOU UTLIZAR PARA ARASTAR E SOLTAR O OBJETO // quando o OBJETO VAI ANDAR JUNTO COM O MOUSE
 //    @Override

@@ -20,7 +20,7 @@ public abstract class Piece {
     }
 
     // esses Metodos abstratos que cada filho tera e será personalizado;
-    public boolean validMov(int x, int y) {
+    public boolean validMov(int x, int y) { // Função para verificar se existe uma peca amiga "" na pos
         return true;
     }
 
