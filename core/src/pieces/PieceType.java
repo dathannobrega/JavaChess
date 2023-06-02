@@ -1,4 +1,4 @@
-package domain.pieces;
+package pieces;
 
 public class PieceType { // classe usada para atributos gerais das Peças
     public enum Color {
@@ -10,6 +10,7 @@ public class PieceType { // classe usada para atributos gerais das Peças
         }
 
     }
+
 
 
 }
