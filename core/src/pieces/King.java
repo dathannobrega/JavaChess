@@ -5,8 +5,8 @@ public class King extends Piece {
         super(active, color, figure,posX,posY);
     }
     @Override
-    public void validMov(int x, int y) {
-
+    public boolean validMov(int x, int y) {
+        return true;
     }
 
     @Override

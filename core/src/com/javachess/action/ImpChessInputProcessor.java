@@ -34,12 +34,13 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                     for (int j = 0; j < 8; j++) {
                         if (pieces[i][j] != null)
                             if (pieces[i][j] == selectedPiece){ // faz um comparativo para achar a peca selecionada anteriormente
-                                pieces[i][j].move(getX,getY);
-                                pieces[getX][getY] = selectedPiece;
-                                pieces[i][j] = null;
-                                pieces[getX][getY].setPosX(getX*100);
-                                pieces[getX][getY].setPosY(getY*100);
-                                System.out.println("movido para X= " + getX + " Y=" + getY + "Peca = ("  + selectedPiece.getPosX() + "," + selectedPiece.getPosY() + ")");
+                                if(pieces[i][j].validMov(getX,getY)){
+                                    pieces[getX][getY] = selectedPiece;
+                                    pieces[i][j] = null;
+                                    //Aqui vai ficar um observer para coletar os logs
+                                    //
+                                    //
+                                }
                                 selectedPiece = null; // limpa para o proximo movimento
                             }
 

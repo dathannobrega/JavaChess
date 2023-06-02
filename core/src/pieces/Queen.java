@@ -6,8 +6,8 @@ public class Queen extends Piece {
     }
 
     @Override
-    public void validMov(int x, int y) {
-
+    public boolean validMov(int x, int y) {
+        return true;
     }
 
     @Override

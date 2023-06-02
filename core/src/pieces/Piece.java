@@ -2,7 +2,7 @@ package pieces;
 
 import com.badlogic.gdx.graphics.Texture;
 
-public class Piece {
+public abstract class Piece {
     private boolean active;
     private final PieceType.Color color;
     private Texture figure;
@@ -20,8 +20,8 @@ public class Piece {
     }
 
     // esses Metodos abstratos que cada filho tera e será personalizado;
-    public void validMov(int x, int y) {
-
+    public boolean validMov(int x, int y) {
+        return true;
     }
 
     public void move(int x, int y) {

@@ -6,19 +6,21 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public void validMov(int x, int y) {
-
+    public boolean validMov(int x, int y) {
+        x = x*100;
+        y = y*100;
+        if(getPosX() == x && getPosY()+100  == y ){ // 100 pois é necessario uma posição completa
+            move(x,y);
+            return true;
+        } else {
+            System.out.println("MOVIMENTO INVALIDO");
+            return false;
+        }
     }
 
     @Override
     public void move(int x , int y) {
-        if(getPosX() == x && getPosY() == y){
-            System.out.println("entrou peao");
-            this.setPosX(x);
-            this.setPosY(y);
-        } else {
-            System.out.println("mov Invalido!!");
-        }
-
+        this.setPosX(x);
+        this.setPosY(y);
     }
 }
