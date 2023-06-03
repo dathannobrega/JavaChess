@@ -6,13 +6,15 @@ public class Knight extends Piece {
     }
     @Override
     public boolean validMov(int x, int y) {
-        if(super.validMov(x,y)){
-
-        }
         x = x*100;
         y = y*100;
-        if(getPosX() == x && getPosY()+100  == y ){ // 100 pois é necessario uma posição completa
-            move(x,y);
+        if((getPosX() == x+100 && getPosY()+ 200  == y ) || (getPosX() == x - 100 && getPosY() + 200  == y ) ){// pra frente esquerda ou direita.
+            return true;
+        }else if((getPosX() == x+100 && getPosY()- 200  == y ) || (getPosX() == x - 100 && getPosY() - 200  == y ) ){// pra traz esquerda ou direita.
+            return true;
+        } else if((getPosX() == x+200 && getPosY() - 100  == y ) || (getPosX() == x + 200 && getPosY() + 100  == y ) ){// pra direta cima ou embaixo
+            return true;
+        }else if((getPosX() == x-200 && getPosY() - 100  == y ) || (getPosX() == x - 200 && getPosY() + 100  == y ) ){// pra esquerda cima ou embaixo
             return true;
         } else {
             System.out.println("MOVIMENTO INVALIDO");

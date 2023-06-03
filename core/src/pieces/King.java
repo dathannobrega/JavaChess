@@ -6,11 +6,17 @@ public class King extends Piece {
     }
     @Override
     public boolean validMov(int x, int y) {
-        return true;
+        x = x * 100;
+        y = y * 100;
+        if(y == getPosY() + 100 || getPosX() + 100 == x){
+            return true;
+        } else
+            return false;
     }
 
     @Override
     public void move(int x, int y) {
-
+        this.setPosX(x);
+        this.setPosY(y);
     }
 }
