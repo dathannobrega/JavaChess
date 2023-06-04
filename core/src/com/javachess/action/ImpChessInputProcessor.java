@@ -2,10 +2,12 @@ package com.javachess.action;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
 import pieces.Piece;
 
 public class ImpChessInputProcessor extends ChessInputProcessor{
     private Piece selectedPiece;
+    private Texture img_anterior;
 
     public ImpChessInputProcessor(OrthographicCamera camera, Piece[][] pieces) {
         super(camera, pieces);
@@ -26,6 +28,8 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                         if (peca[cont] != null)
                             if (peca[cont].getPosX() / 100 == getX && peca[cont].getPosY() / 100 == getY) {
                                 if(confirmaVez(peca[cont])) // se for a vez do branco a peca é selecionada
+                                    img_anterior = peca[cont].getFigure();
+                                    peca[cont].setFigure("piece/"+peca[cont].getColor()+"_"+peca[cont].getType()+"_greater.png"); //aqui podemos contornar a peça selecionada
                                     selectedPiece = peca[cont];
                             }
                     }
@@ -40,12 +44,12 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                             if (pieces[i][j] == selectedPiece){ // faz um comparativo para achar a peca selecionada anteriormente
                                 if(pieces[i][j].validMov(getX,getY) && this.verifyEntity(selectedPiece,getX,getY)){
                                     if(isPawn(selectedPiece)){// verifica se a peca é um peao se sim tranforma em queen
-
                                         if(verifyUpgrade(selectedPiece,getY))
                                             selectedPiece = upgradePiece(selectedPiece);
                                     }
 
                                     pieces[i][j].move(pixX,pixY);
+                                    selectedPiece.setFigure(img_anterior);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
                                     trocaVez();

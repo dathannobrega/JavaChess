@@ -9,5 +9,6 @@ public interface Result {
     Knight getResultKnigth();
     King getResultKing();
     Bishop getResultBishop();
+    String getType();
 
 }

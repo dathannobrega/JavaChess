@@ -1,8 +1,8 @@
 package pieces;
 
 public class Queen extends Piece {
-    public Queen(boolean active, PieceType.Color color, String figure,int posX,int posY) {
-        super(active, color, figure,posX,posY);
+    public Queen(boolean active, PieceType.Color color, String figure,int posX,int posY,String type) {
+        super(active, color, figure,posX,posY,type);
     }
 
     @Override

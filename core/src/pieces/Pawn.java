@@ -5,8 +5,8 @@ import pieces.builders.PieceBuilder;
 public class Pawn extends Piece {
     PieceBuilder pb = new PieceBuilder();
     private boolean isFirst = true;
-    public Pawn(boolean active, PieceType.Color color, String figure,int posX,int posY) {
-        super(active, color, figure,posX,posY);
+    public Pawn(boolean active, PieceType.Color color, String figure,int posX,int posY,String type) {
+        super(active, color, figure,posX,posY,type);
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Pawn extends Piece {
 
         if(isFirst){
             this.isFirst = false; // ja seta para nunca mais entrar
-            if (getColor() == PieceType.Color.BRANCA) {
+            if (getColor() == PieceType.Color.white) {
                 if (getPosX() == x && getPosY() + 100 == y || getPosX() == x && getPosY() + 200 == y) { // 200 pois é necessario uma posição completa
                     return true;
                 } else {
@@ -30,7 +30,7 @@ public class Pawn extends Piece {
                 }
             }
         } else {
-            if (getColor() == PieceType.Color.BRANCA) {
+            if (getColor() == PieceType.Color.black) {
                 if (getPosX() == x && getPosY() + 100 == y) { // 100 pois é necessario uma posição completa
                     return true;
                 } else {
@@ -49,7 +49,7 @@ public class Pawn extends Piece {
     @Override
     public void move(int x , int y) { // a regra de tranformação fica aqui tmb
 
-        if (getColor() == PieceType.Color.BRANCA) {
+        if (getColor() == PieceType.Color.white) {
             this.setPosX(x);
             this.setPosY(y);
         }else{

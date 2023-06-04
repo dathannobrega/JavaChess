@@ -5,17 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="bug Friend kill fixed">
+      <change afterPath="$PROJECT_DIR$/assets/piece/black_bishop_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/black_king_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/black_knight_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/black_pawn_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/black_queen_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/black_rook_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/white_bishop_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/white_king_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/white_knight_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/white_pawn_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/white_queen_greater.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/piece/white_rook_greater.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/Verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/Verification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/King.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/PieceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/PieceType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/board/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/builders/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/builders/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/builders/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/builders/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/src/com/javachess/DesktopLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/com/javachess/DesktopLauncher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,29 +62,25 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="trabalho-final-POO2" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JavaChess" type="f1a62948:ProjectNode" />
-                <item name="core" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="trabalho-final-POO2" type="f1a62948:ProjectNode" />
                 <item name="desktop" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="trabalho-final-POO2" type="f1a62948:ProjectNode" />
                 <item name="desktop" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="trabalho-final-POO2" type="f1a62948:ProjectNode" />
                 <item name="desktop" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -94,28 +108,34 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QdAXbnZNnnB5lrLSkpcU3PMPk4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "moviments",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;moviments&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/guilherme/OneDrive - Universidade Federal de Uberlândia/repositorios-github-ufu/trabalho-final-POO2/build.gradle&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\datha\IdeaProjects\JavaChess\assets" />
@@ -253,6 +273,7 @@
       <workItem from="1685673127977" duration="2988000" />
       <workItem from="1685743484365" duration="3168000" />
       <workItem from="1685748239463" duration="10170000" />
+      <workItem from="1685813592347" duration="8370000" />
     </task>
     <task id="LOCAL-00001" summary="bug Friend kill fixed">
       <created>1685746172437</created>
@@ -279,18 +300,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="bug Friend kill fixed" />
     <option name="LAST_COMMIT_MESSAGE" value="bug Friend kill fixed" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/core/src/pieces/Pawn.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

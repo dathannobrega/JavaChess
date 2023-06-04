@@ -99,11 +99,11 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
         PieceBuilder pb = new PieceBuilder();
         pb.setCoord(peca.getPosX(), peca.getPosY());
         pb.setActive(true);
-        if(peca.getColor() == PieceType.Color.BRANCA){
-            pb.setColor(PieceType.Color.BRANCA);
+        if(peca.getColor() == PieceType.Color.white){
+            pb.setColor(PieceType.Color.white);
             pb.setFigure("piece/white_queen.png");
         }else{
-            pb.setColor(PieceType.Color.PRETA);
+            pb.setColor(PieceType.Color.black);
             pb.setFigure("piece/black_queen.png");
         }
         return pb.getResultQueen();
@@ -125,9 +125,9 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
 
     @Override
     public boolean confirmaVez(Piece peca){
-        if(vezBranco && peca.getColor() == PieceType.Color.BRANCA){
+        if(vezBranco && peca.getColor() == PieceType.Color.white){
             return true;
-        } else if(!vezBranco && peca.getColor() == PieceType.Color.PRETA) {
+        } else if(!vezBranco && peca.getColor() == PieceType.Color.black) {
             return true;
         } else {
             return false;
