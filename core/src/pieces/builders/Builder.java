@@ -8,4 +8,5 @@ public interface Builder {
 
     public void setFigure(String figure);
     public void setCoord(int posX,int posY);
+    public void setType(String type);
 }

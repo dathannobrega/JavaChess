@@ -1,14 +1,13 @@
 package pieces.builders;
 
-import pieces.Piece;
-import pieces.PieceType;
+import pieces.*;
 
 //classe imlementada para criar as peças corretas durante a incialização do tabuleiro.
 //utiliza o Metodo CriacionalBuilder.
-public class PieceBuilder implements Builder{
+public class PieceBuilder implements Builder,Result{
     private boolean active;
     private PieceType.Color color;
-    private String figure;
+    private String figure, type;
 
     private int posX;
     private int posY;
@@ -31,7 +30,43 @@ public class PieceBuilder implements Builder{
         this.posY = posY;
     }
 
-    public Piece getResult() {
-        return new Piece(active, color, figure, posX, posY);
+    //Nessa sessão retornamos varios tipos de objetos na saida.
+
+    @Override
+    public Pawn getResultPawn() {
+        return new Pawn(active, color, figure, posX, posY,type);
+    }
+
+    @Override
+    public Rook getResultRook() {
+        return new Rook(active, color, figure, posX, posY,type);
+    }
+
+    @Override
+    public Queen getResultQueen() {
+        return new Queen(active, color, figure, posX, posY,type);
+    }
+
+    @Override
+    public Knight getResultKnigth() {
+        return new Knight(active, color, figure, posX, posY,type);
+    }
+
+    @Override
+    public King getResultKing() {
+        return new King(active, color, figure, posX, posY,type);
+    }
+
+    @Override
+    public Bishop getResultBishop() {
+        return new Bishop(active, color, figure, posX, posY,type);
+    }
+    @Override
+    public String getType() {
+        return type;
+    }
+    @Override
+    public void setType(String type) {
+        this.type = type;
     }
 }

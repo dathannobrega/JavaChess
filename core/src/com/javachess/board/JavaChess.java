@@ -30,7 +30,7 @@ public class JavaChess extends ApplicationAdapter {
 		//criação do tabuleiro em si
 		squad = new Texture("squad.png");
 		camera = new OrthographicCamera(screenWidth, screenHeight);
-		camera.setToOrtho(false);
+		camera.setToOrtho(false); // FAZER DOCUMENTAÇÂO
 		//criação das piecas
 		CreatePieces create = new CreatePieces(pieces);
 		pieces = create.createPiece();
