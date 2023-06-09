@@ -10,7 +10,7 @@ public interface Verification { // interface criada para verificar alguns movime
     boolean verifyUpgrade(Piece peca , int y);
     boolean confirmaVez(Piece peca); // função usada para ver se a peça selecionada é de acordo com a vez.
 
-    //boolean verifyKill(Piece peca, int x,int y);
+    boolean verifyKill(Piece peca, int x,int y);
 
     boolean isPawn(Piece peca);
 }

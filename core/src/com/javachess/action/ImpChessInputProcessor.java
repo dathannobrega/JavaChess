@@ -2,12 +2,10 @@ package com.javachess.action;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import pieces.Piece;
 
 public class ImpChessInputProcessor extends ChessInputProcessor{
     private Piece selectedPiece;
-    private Texture img_anterior;
 
     public ImpChessInputProcessor(OrthographicCamera camera, Piece[][] pieces) {
         super(camera, pieces);
@@ -25,31 +23,32 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             if(selectedPiece == null) { // é pq não tem nada selecionado
                 for (Piece[] peca : getPieces()) {
                     for (int cont = 0; cont < 8; cont++) {
-                        if (peca[cont] != null)
+                        if (peca[cont] != null){
                             if (peca[cont].getPosX() / 100 == getX && peca[cont].getPosY() / 100 == getY) {
-                                if(confirmaVez(peca[cont])) // se for a vez do branco a peca é selecionada
-                                    img_anterior = peca[cont].getFigure();
-                                    peca[cont].setFigure("piece/"+peca[cont].getColor()+"_"+peca[cont].getType()+"_greater.png"); //aqui podemos contornar a peça selecionada
+                                System.out.println("entrou 2");
+                                if(confirmaVez(peca[cont])){// se for a vez do branco a peca é selecionada
                                     selectedPiece = peca[cont];
+                                    selectedPiece.setFigure("piece/"+peca[cont].getColor().name() + "_"+peca[cont].getType()+"_"+ "selected.png");
+                                }
                             }
+                        }
                     }
-
                 }
             } else { // tem algo selecionado
                 Piece[][] pieces = this.getPieces();
             //AQUI È ONDE ESTOU FAZENDO A TENTATIVA DE PEGAR A PEÇA E MOVER PRA OUTRO LUGAR SUBSTITUINDO A POS
                 for (int i =0; i <8;i ++) {
                     for (int j = 0; j < 8; j++) {
-                        if (pieces[i][j] != null)
-                            if (pieces[i][j] == selectedPiece){ // faz um comparativo para achar a peca selecionada anteriormente
-                                if(pieces[i][j].validMov(getX,getY) && this.verifyEntity(selectedPiece,getX,getY)){
-                                    if(isPawn(selectedPiece)){// verifica se a peca é um peao se sim tranforma em queen
-                                        if(verifyUpgrade(selectedPiece,getY))
+                        if (pieces[i][j] != null) {
+                            if (pieces[i][j] == selectedPiece) { // faz um comparativo para achar a peca selecionada anteriormente
+                                if (pieces[i][j].validMov(getX, getY) && this.verifyEntity(selectedPiece, getX, getY)) {
+                                    if (isPawn(selectedPiece)) {// verifica se a peca é um peao se sim tranforma em queen
+
+                                        if (verifyUpgrade(selectedPiece, getY))
                                             selectedPiece = upgradePiece(selectedPiece);
                                     }
-
-                                    pieces[i][j].move(pixX,pixY);
-                                    selectedPiece.setFigure(img_anterior);
+                                    selectedPiece.setFigure("piece/" + pieces[i][j].getColor().name() + "_" + pieces[i][j].getType() + ".png");
+                                    pieces[i][j].move(pixX, pixY);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
                                     trocaVez();
@@ -59,11 +58,9 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                                 }
                                 selectedPiece = null; // limpa para o proximo movimento
                             }
-
+                        }
                     }
-
                 }
-
             }
             System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
         }

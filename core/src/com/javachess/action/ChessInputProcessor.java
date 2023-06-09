@@ -133,4 +133,21 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
             return false;
         }
     }
+
+    //função que verifica a Peça PAWN para ver se ela pode mover para o lado e impede que coma de frente
+    @Override
+    public boolean verifyKill(Piece peca, int x,int y){ // verifica o movimento e se esta matando o amigo
+        Piece wantKill = pieces[x][y];
+        if(peca.validMov(x,y)){
+            if(peca.getPosX()/100 == y - 1) // se for a peça da frente não posso mata(Peão nao come reto)
+                return false;
+            if(wantKill != null && verifyEntity(wantKill,x,y)){ // se a peça for do lado e não for amiga eu poço matar.
+                return true; //se a peça for a do lado eu posso matar!
+            }else {
+                return false;
+            }
+        } else{
+            return true;
+        }
+    }
 }
