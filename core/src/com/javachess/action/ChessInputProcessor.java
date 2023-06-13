@@ -15,8 +15,9 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
 
     private static final float CELL_SIZE = 100f;
     private OrthographicCamera camera;
-    private Piece[][]pieces;
+    private static Piece[][]pieces;
     private boolean vezBranco = true;
+    CalculateTurn calculateTurn;
 
     public boolean isVezBranco() {
         return vezBranco;
@@ -25,6 +26,7 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
     public ChessInputProcessor(OrthographicCamera camera, Piece pieces[][]) {
         this.camera = camera;
         this.pieces = pieces;
+        calculateTurn = new CalculateTurn(pieces); // passo o tabuleiro pro calculador.
     }
 
     @Override
@@ -82,35 +84,79 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
         }
     }
 
-    @Override
-    public boolean verifyEntity(Piece peca, int x, int y) {
+
+    static public boolean verifyEntity(Piece peca, int x, int y) {
         if(pieces[x][y] == null){ // se a posição estiver vazia ele me retorna true
             return true;
         }
         if(pieces[x][y].getColor() == peca.getColor()){
-            System.out.println("vc nao pode matar um amigo");
             return false;
         } else{
             return true;
         }
     }
+//TODAS OS MOVIMENTOS ESPECIAIS RELACIOANDOS AO PEAO SAO TRATADOS no KILLPawn
+    static public boolean killPawn(Piece peca, int x, int y) {
+        int myX = peca.getPosX()/100; // pego a posição atual da peca que movo
+        int myY = peca.getPosY()/100; // e divido por 100 para ter numeros de 0 a 7
+
+        //Nao deixa matar para frente tanto paro o branco quanto para o preto
+        if(pieces[x][y] != null) // se nao tiver peca retorna false
+            if(pieces[x][y].getColor() != peca.getColor()) // se for inimiga retorna true
+                if(x == myX && Math.abs(y-myY) == 1) // se vou para frente não deixo.
+                    return false;
+
+        //Movimentos especiais do peao PRETO
+        if(peca.getColor().name() == "white") { // Trato o passant da branca
+            //Aqui tratamos o comer pro lado.
+            if(pieces[x][y] != null) // se nao tiver peca retorna false
+                if(pieces[x][y].getColor() != peca.getColor()) // se for inimiga retorna true
+                    if(Math.abs(x-myX) == 1 && myY + 1  == y) // se vou para o lado eu permito se for para matar uma peca
+                        return true;
+
+            //Essa parte trataremos o Passant
+            if (pieces[x][y] == null  && x != myX) // se nao tiver peca retorna false
+                if (pieces[x][y - 1] != null && (pieces[x][y - 1].getColor() != peca.getColor()) ) {//se a pesa embaixo tiver algo
+                    pieces[x][y - 1] = null; //mato a peca
+                    return true;
+                }else {
+                    return false; // se nao for retorna false e não deixa
+                }
+        } else { //Movimentos especiais do peao PRETO
+
+            if(pieces[x][y] != null) // se nao tiver peca retorna false
+                if(pieces[x][y].getColor() != peca.getColor()) // se for inimiga retorna true
+                    if(Math.abs(x-myX) == 1 && myY - 1  == y) // se vou para o lado eu permito se for para matar uma peca
+                        return true;
+            if (pieces[x][y] == null && x != myX) // se nao tiver peca retorna false
+                if (pieces[x][y + 1] != null && (pieces[x][y + 1].getColor() != peca.getColor())) {//se a pesa embaixo tiver algo
+                    pieces[x][y + 1] = null; //mato a peca
+                    return true;
+                } else {
+                    return false;
+                }
+        }
+
+
+        return true;
+    }
     @Override
-    public Queen upgradePiece(Piece peca){
+    public Queen upgradePiece(Piece peca,int getx,int gety){
         PieceBuilder pb = new PieceBuilder();
-        pb.setCoord(peca.getPosX(), peca.getPosY());
+        pb.setCoord(getx, gety);
         pb.setActive(true);
+        pb.setType("queen");
+        pb.setFigure("piece/"+peca.getColor().name()+"_queen.png");
         if(peca.getColor() == PieceType.Color.white){
             pb.setColor(PieceType.Color.white);
-            pb.setFigure("piece/white_queen.png");
         }else{
             pb.setColor(PieceType.Color.black);
-            pb.setFigure("piece/black_queen.png");
         }
         return pb.getResultQueen();
     }
     @Override
     public boolean verifyUpgrade(Piece peca,int  y){
-        if(peca instanceof Pawn && (y == 7 || y == 0))
+        if(y == 7 || y == 0)
             return true;
         else
             return false;
@@ -150,4 +196,5 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
             return true;
         }
     }
+
 }

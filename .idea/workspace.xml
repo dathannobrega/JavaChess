@@ -4,25 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Add many movements">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="movimentos e selecção arrumados, alguns bugs presentes">
+      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/black_bishop_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/black_king_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/black_knight_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/black_pawn_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/black_queen_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/black_rook_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/white_bishop_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/white_king_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/white_knight_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/white_pawn_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/white_queen_greater.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/piece/white_rook_greater.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/badlogic.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/Verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/Verification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,13 +57,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="moviments" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,47 +77,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;moviments&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "Test",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\datha\IdeaProjects\JavaChess\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DesktopLauncher">
-    <configuration name="DesktopLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javachess.DesktopLauncher" />
-      <module name="JavaChess.desktop.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javachess.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaChess:desktop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.JavaChess:desktop [run]">
+    <configuration name="JavaChess [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -131,7 +113,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -142,7 +124,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="JavaChess:desktop [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JavaChess:desktop [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
@@ -153,7 +135,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="check" />
+            <option value="buildDependents" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -164,7 +146,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="JavaChess:desktop [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JavaChess:desktop [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
@@ -175,7 +157,29 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jar" />
+            <option value="buildEnvironment" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="JavaChess:desktop [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DesktopLauncher" />
         <item itemvalue="Gradle.JavaChess:desktop [testClasses]" />
-        <item itemvalue="Gradle.JavaChess:desktop [jar]" />
-        <item itemvalue="Gradle.JavaChess:desktop [build]" />
-        <item itemvalue="Gradle.JavaChess:desktop [check]" />
+        <item itemvalue="Gradle.JavaChess:desktop [run]" />
+        <item itemvalue="Gradle.JavaChess:desktop [buildEnvironment]" />
+        <item itemvalue="Gradle.JavaChess:desktop [buildDependents]" />
+        <item itemvalue="Gradle.JavaChess [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +235,12 @@
       <workItem from="1685748239463" duration="10170000" />
       <workItem from="1686097235382" duration="3460000" />
       <workItem from="1686105225769" duration="3025000" />
+      <workItem from="1686270920993" duration="4283000" />
+      <workItem from="1686344530512" duration="1168000" />
+      <workItem from="1686403259364" duration="18062000" />
+      <workItem from="1686452317704" duration="17000" />
+      <workItem from="1686452372357" duration="852000" />
+      <workItem from="1686670326746" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="bug Friend kill fixed">
       <created>1685746172437</created>
@@ -239,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685746172437</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="movimentos e selecção arrumados, alguns bugs presentes">
+      <created>1686271007818</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686271007818</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +267,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="moviments" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -258,6 +287,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bug Friend kill fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug Friend kill fixed" />
+    <MESSAGE value="movimentos e selecção arrumados, alguns bugs presentes" />
+    <option name="LAST_COMMIT_MESSAGE" value="movimentos e selecção arrumados, alguns bugs presentes" />
   </component>
 </project>

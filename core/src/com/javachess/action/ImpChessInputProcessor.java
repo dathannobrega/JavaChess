@@ -20,12 +20,13 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             pixY = getY*100;
             pixX = getX*100;
 
+            //if(calculateTurn.isChecked(isVezBranco()))
+            //    System.out.println("esta de Check");
             if(selectedPiece == null) { // é pq não tem nada selecionado
                 for (Piece[] peca : getPieces()) {
                     for (int cont = 0; cont < 8; cont++) {
                         if (peca[cont] != null){
                             if (peca[cont].getPosX() / 100 == getX && peca[cont].getPosY() / 100 == getY) {
-                                System.out.println("entrou 2");
                                 if(confirmaVez(peca[cont])){// se for a vez do branco a peca é selecionada
                                     selectedPiece = peca[cont];
                                     selectedPiece.setFigure("piece/"+peca[cont].getColor().name() + "_"+peca[cont].getType()+"_"+ "selected.png");
@@ -43,24 +44,24 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                             if (pieces[i][j] == selectedPiece) { // faz um comparativo para achar a peca selecionada anteriormente
                                 if (pieces[i][j].validMov(getX, getY) && this.verifyEntity(selectedPiece, getX, getY)) {
                                     if (isPawn(selectedPiece)) {// verifica se a peca é um peao se sim tranforma em queen
-
                                         if (verifyUpgrade(selectedPiece, getY))
-                                            selectedPiece = upgradePiece(selectedPiece);
+                                            selectedPiece = upgradePiece(selectedPiece,pixX,pixY);
                                     }
-                                    selectedPiece.setFigure("piece/" + pieces[i][j].getColor().name() + "_" + pieces[i][j].getType() + ".png");
                                     pieces[i][j].move(pixX, pixY);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
-                                    trocaVez();
+                                    //trocaVez();
                                     //Aqui vai ficar um observer para coletar os logs
                                     //
                                     //
                                 }
-                                selectedPiece = null; // limpa para o proximo movimento
+
                             }
                         }
                     }
-                }
+                }//aqui eu reseto a imagem e retiro a seleçao na peça
+                selectedPiece.setFigure("piece/" + selectedPiece.getColor().name() + "_" + selectedPiece.getType() + ".png");
+                selectedPiece = null; // limpa para o proximo movimento
             }
             System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
         }
