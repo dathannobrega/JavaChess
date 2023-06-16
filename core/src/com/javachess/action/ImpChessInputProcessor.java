@@ -3,7 +3,6 @@ package com.javachess.action;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import pieces.Piece;
-
 public class ImpChessInputProcessor extends ChessInputProcessor{
     private Piece selectedPiece;
 
@@ -20,8 +19,9 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             pixY = getY*100;
             pixX = getX*100;
 
-            //if(calculateTurn.isChecked(isVezBranco()))
-            //    System.out.println("esta de Check");
+            if(calculateTurn.isChecked(isVezBranco()))
+                System.out.println("esta de Check");
+
             if(selectedPiece == null) { // é pq não tem nada selecionado
                 for (Piece[] peca : getPieces()) {
                     for (int cont = 0; cont < 8; cont++) {
@@ -35,8 +35,13 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                         }
                     }
                 }
+                System.out.println("DEBUG: Entrou no SOltar peça");
             } else { // tem algo selecionado
                 Piece[][] pieces = this.getPieces();
+                for (int i = 0; i <100 ; i++)
+                    System.out.println("DEBUG: Entrou no SOltar peça");
+
+
             //AQUI È ONDE ESTOU FAZENDO A TENTATIVA DE PEGAR A PEÇA E MOVER PRA OUTRO LUGAR SUBSTITUINDO A POS
                 for (int i =0; i <8;i ++) {
                     for (int j = 0; j < 8; j++) {
@@ -50,7 +55,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                                     pieces[i][j].move(pixX, pixY);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
-                                    //trocaVez();
+                                    trocaVez();
                                     //Aqui vai ficar um observer para coletar os logs
                                     //
                                     //

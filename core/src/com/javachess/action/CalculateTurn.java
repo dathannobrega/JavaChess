@@ -14,6 +14,7 @@ public class CalculateTurn {
     }
 
     public boolean isChecked(boolean vezBranco){
+        System.out.println("ENTREI AQUI1");
 
         for (Piece[] peca: tabuleiro){ //esse for passa por cada camada do tabuleiro verificando
             for (int cont = 0; cont < 8; cont++) {
@@ -25,7 +26,7 @@ public class CalculateTurn {
                 }
             }
         }
-
+        System.out.println("ENTREI AQUI");
         //aqui vejo se existe alguma peca do tabuleiro inimiga que pode ir para a posição do rei
         for (Piece[] peca: tabuleiro){ //esse for passa por cada camada do tabuleiro verificando
             for (int cont = 0; cont < 8; cont++) {
@@ -43,14 +44,14 @@ public class CalculateTurn {
     static public boolean isOverwrite(Piece peca,int x,int y){
         int myX = peca.getPosX()/100;//posiçoes da peca convertida
         int muY = peca.getPosY()/100;
-        if(peca.validMov(x,y)){
+
             for (int i = myX, j = muY; i <= x && j<=y; i++,j++) {
-                if(tabuleiro[i][j] != null){
+                if (tabuleiro[i][j] != null) {
                     return true;
                 }
-                if(i == x)
+                if (i == x)
                     x--;
-                if(j== y)
+                if (j == y)
                     j--;
             }
 
@@ -83,7 +84,6 @@ public class CalculateTurn {
                 if(j== y)
                     j--;
             }
-        }
         return false;
     }
 }
