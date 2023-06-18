@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão">
+      <change beforePath="$PROJECT_DIR$/assets/icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/src/com/javachess/DesktopLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/com/javachess/DesktopLauncher.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
