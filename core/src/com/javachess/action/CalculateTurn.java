@@ -4,7 +4,7 @@ import pieces.King;
 import pieces.Piece;
 
 //o Calculate Turn é uma classe responsavel por "ver o futuro" é ela que possuiu as funçoes de ver se esta em check,
-// ver se aconteceu um check mate e ela que pinta o tabuleiro para as jogadas permitirdas
+// ver se aconteceu um check mate e ela que pinta o tabuleiro para as jogadas permitidas
 public class CalculateTurn {
     static Piece [][] tabuleiro;
     Piece selectedPiece;

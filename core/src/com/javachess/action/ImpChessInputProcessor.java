@@ -38,8 +38,8 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                 System.out.println("DEBUG: Entrou no SOltar peça");
             } else { // tem algo selecionado
                 Piece[][] pieces = this.getPieces();
-                for (int i = 0; i <100 ; i++)
-                    System.out.println("DEBUG: Entrou no SOltar peça");
+                //for (int i = 0; i <100 ; i++)
+                //    System.out.println("DEBUG: Entrou no SOltar peça"); qual a necessidade desse for ???
 
 
             //AQUI È ONDE ESTOU FAZENDO A TENTATIVA DE PEGAR A PEÇA E MOVER PRA OUTRO LUGAR SUBSTITUINDO A POS

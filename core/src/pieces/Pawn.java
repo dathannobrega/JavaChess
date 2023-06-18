@@ -16,8 +16,8 @@ public class Pawn extends Piece {
         x = x * 100;
         y = y * 100;
 
-        if(CalculateTurn.isOverwrite(this,x,y))
-            return false;
+        //if(CalculateTurn.isOverwrite(this,x,y))
+        //    return false;
 
         if(isFirst){
             this.isFirst = false; // ja seta para nunca mais entrar
@@ -27,7 +27,7 @@ public class Pawn extends Piece {
                 } else {
                     return false;
                 }
-            }else {
+            } else {
                 if (getPosX() == x && (getPosY() - 100 == y || getPosY() - 200 == y)) { // 200 pois é necessario uma posição completa
                     return true;
                 } else {
