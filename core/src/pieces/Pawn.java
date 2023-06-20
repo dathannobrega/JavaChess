@@ -16,8 +16,8 @@ public class Pawn extends Piece {
         x = x * 100;
         y = y * 100;
 
-        //if(CalculateTurn.isOverwrite(this,x,y))
-        //    return false;
+        if(CalculateTurn.isOverwrite(this,x,y))
+            return false;
 
         if(isFirst){
             this.isFirst = false; // ja seta para nunca mais entrar
