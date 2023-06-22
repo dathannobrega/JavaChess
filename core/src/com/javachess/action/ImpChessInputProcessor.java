@@ -12,7 +12,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
 
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        int getX, getY,pixX,pixY;
+        int getX, getY,pixX,pixY, linha, coluna;
         if(Gdx.input.isTouched()){
             getX = (int) Gdx.input.getX()/100;
             getY = Math.abs((int) Gdx.input.getY()/100 -7); // por algum motivo o y esta errado e esta invertido pois a posicao 0,0 deve ficar no canto inferior esquerdo
@@ -22,53 +22,81 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             if(calculateTurn.isChecked(isVezBranco()))
                 System.out.println("esta de Check");
 
-            if(selectedPiece == null) { // é pq não tem nada selecionado
-                for (Piece[] peca : getPieces()) {
-                    for (int cont = 0; cont < 8; cont++) {
-                        if (peca[cont] != null){
-                            if (peca[cont].getPosX() / 100 == getX && peca[cont].getPosY() / 100 == getY) {
-                                if(confirmaVez(peca[cont])){// se for a vez do branco a peca é selecionada
-                                    selectedPiece = peca[cont];
-                                    selectedPiece.setFigure("piece/"+peca[cont].getColor().name() + "_"+peca[cont].getType()+"_"+ "selected.png");
+            if(selectedPiece == null){
+                for(linha = 0; linha < 8; linha++){
+                    for(coluna = 0; coluna < 8; coluna++){
+                        if(pieces[linha][coluna] != null){
+                            if(linha == getX && coluna == getY){
+                                if(confirmaVez(pieces[linha][coluna])){
+                                    selectedPiece = pieces[linha][coluna];
+                                    selectedPiece.setFigure("piece/"+pieces[linha][coluna].getColor().name() + "_"+pieces[linha][coluna].getType()+"_"+ "selected.png");
                                 }
                             }
                         }
                     }
                 }
-                System.out.println("DEBUG: Entrou no SOltar peça");
-            } else { // tem algo selecionado
-                Piece[][] pieces = this.getPieces();
-                for (int i = 0; i <100 ; i++)
-                    System.out.println("DEBUG: Entrou no SOltar peça");
-
-
-            //AQUI È ONDE ESTOU FAZENDO A TENTATIVA DE PEGAR A PEÇA E MOVER PRA OUTRO LUGAR SUBSTITUINDO A POS
-                for (int i =0; i <8;i ++) {
-                    for (int j = 0; j < 8; j++) {
-                        if (pieces[i][j] != null) {
-                            if (pieces[i][j] == selectedPiece) { // faz um comparativo para achar a peca selecionada anteriormente
-                                if (pieces[i][j].validMov(getX, getY) && this.verifyEntity(selectedPiece, getX, getY)) {
-                                    if (isPawn(selectedPiece)) {// verifica se a peca é um peao se sim tranforma em queen
-                                        if (verifyUpgrade(selectedPiece, getY))
-                                            selectedPiece = upgradePiece(selectedPiece,pixX,pixY);
-                                    }
-                                    pieces[i][j].move(pixX, pixY);
-                                    pieces[getX][getY] = selectedPiece;
-                                    pieces[i][j] = null;
-                                    trocaVez();
-                                    //Aqui vai ficar um observer para coletar os logs
-                                    //
-                                    //
-                                }
-
-                            }
-                        }
+            } else {
+                if(selectedPiece.validMov(getX, getY) && verifyEntity(selectedPiece, getX, getY)){
+                    if(verifyUpgrade(selectedPiece,getY)){
+                        selectedPiece = upgradePiece(selectedPiece,pixX,pixY);
                     }
-                }//aqui eu reseto a imagem e retiro a seleçao na peça
+                    pieces[selectedPiece.getPosX()/100][selectedPiece.getPosY()/100] = null;
+                    selectedPiece.move(pixX, pixY);
+                    pieces[getX][getY] = selectedPiece;
+                    trocaVez();
+                }
                 selectedPiece.setFigure("piece/" + selectedPiece.getColor().name() + "_" + selectedPiece.getType() + ".png");
-                selectedPiece = null; // limpa para o proximo movimento
+                selectedPiece = null;
             }
-            System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
+
+
+//            if(selectedPiece == null) { // é pq não tem nada selecionado
+//                for (Piece[] peca : getPieces()) {
+//                    for (int cont = 0; cont < 8; cont++) {
+//                        if (peca[cont] != null){
+//                            if (peca[cont].getPosX() / 100 == getX && peca[cont].getPosY() / 100 == getY) {
+//                                if(confirmaVez(peca[cont])){// se for a vez do branco a peca é selecionada
+//                                    selectedPiece = peca[cont];
+//                                    selectedPiece.setFigure("piece/"+peca[cont].getColor().name() + "_"+peca[cont].getType()+"_"+ "selected.png");
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//                System.out.println("DEBUG: Entrou no SOltar peça");
+//            } else { // tem algo selecionado
+//                Piece[][] pieces = this.getPieces();
+//                //for (int i = 0; i <100 ; i++)
+//                //    System.out.println("DEBUG: Entrou no SOltar peça"); qual a necessidade desse for ???
+//
+//
+//            //AQUI È ONDE ESTOU FAZENDO A TENTATIVA DE PEGAR A PEÇA E MOVER PRA OUTRO LUGAR SUBSTITUINDO A POS
+//                for (int i =0; i <8;i ++) {
+//                    for (int j = 0; j < 8; j++) {
+//                        if (pieces[i][j] != null) {
+//                            if (pieces[i][j] == selectedPiece) { // faz um comparativo para achar a peca selecionada anteriormente
+//                                if (pieces[i][j].validMov(getX, getY) && this.verifyEntity(selectedPiece, getX, getY)) {
+//                                    if (isPawn(selectedPiece)) {// verifica se a peca é um peao se sim tranforma em queen
+//                                        if (verifyUpgrade(selectedPiece, getY))
+//                                            selectedPiece = upgradePiece(selectedPiece,pixX,pixY);
+//                                    }
+//                                    pieces[i][j].move(pixX, pixY);
+//                                    pieces[getX][getY] = selectedPiece;
+//                                    pieces[i][j] = null;
+//                                    trocaVez();
+//                                    //Aqui vai ficar um observer para coletar os logs
+//                                    //
+//                                    //
+//                                }
+//
+//                            }
+//                        }
+//                    }
+//                }//aqui eu reseto a imagem e retiro a seleçao na peça
+//                selectedPiece.setFigure("piece/" + selectedPiece.getColor().name() + "_" + selectedPiece.getType() + ".png");
+//                selectedPiece = null; // limpa para o proximo movimento
+//            }
+//            System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
         }
         return false;
     }

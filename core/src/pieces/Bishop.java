@@ -12,8 +12,8 @@ public class Bishop extends Piece {
 
         int posx = getPosX()/100; // por algum motivo essa peca esta multiplicada por 100
         int posy = getPosY()/100;
-        if(CalculateTurn.isOverwrite(this,x,y)) //função que verifica se não estou passando em cima de ninguem.
-            return false;
+//        if(CalculateTurn.isOverwrite(this,x,y)) //função que verifica se não estou passando em cima de ninguem.
+//            return false;
 
         for (int i = posx ,j = posy ; i <= 7 || j <= 7 ; i++, j++){
             if(x == i && y == j)

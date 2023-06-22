@@ -27,7 +27,7 @@ public class Pawn extends Piece {
                 } else {
                     return false;
                 }
-            }else {
+            } else {
                 if (getPosX() == x && (getPosY() - 100 == y || getPosY() - 200 == y)) { // 200 pois é necessario uma posição completa
                     return true;
                 } else {

@@ -14,7 +14,7 @@ public class DesktopLauncher {
 		config.setWindowedMode(800,800); // define a janela como 800 x 800 pixel
 		config.setResizable(false); // não permite alterar a resolução da tela
 
-		config.setWindowIcon("icon.jpg");
+		config.setWindowIcon("icon.png");
 		new Lwjgl3Application(new JavaChess(), config);
 	}
 }
