@@ -42,47 +42,62 @@ public class CalculateTurn {
     //essa função calcula se a peca esta "passando em cima de outra peca."
     static public boolean isOverwrite(Piece peca,int x,int y){
         int myX = peca.getPosX()/100;//posiçoes da peca convertida
-        int muY = peca.getPosY()/100;
+        int myY = peca.getPosY()/100;
 
-            for (int i = myX, j = muY; i <= x && j<=y; i++,j++) {
-                if (tabuleiro[i][j] != null) {
-                    return true;
+            if(myY == y && myX < x) { // se for matar uma peca ao lado direita
+                for (int i = myX; i <= x; i++) {
+                    if (tabuleiro[i][myY] != null) {
+                        return true;
+                    }
                 }
-                if (i == x)
-                    x--;
-                if (j == y)
-                    j--;
+            }
+            else if(myY == y && myX > x) // se for matar uma peca ao lado esquerdo
+                for (int i = myX; i >= x; i--) {
+                    if (tabuleiro[i][myY] != null) {
+                        return true;
+                    }
+                }
+            else if (myY < y && myX == x) { //se for matar para cima
+                for (int j = myY; j <= x; j++) {
+                    if (tabuleiro[myX][j] != null) {
+                        return true;
+                    }
+                }
+            }else if (myY > y && myX == x) { //se for matar para baixo
+                for (int j = myY; j >= x; j--) {
+                    if (tabuleiro[myX][j] != null) {
+                        return true;
+                    }
+                }
+            }else if (myY > y && myX > x) { //Matar diagonal crescente para baixo
+                for (int i = myX, j = myY; i >= x && j >= y; i--, j--) {
+                    if (tabuleiro[i][j] != null) {
+                        return true;
+                    }
+
+                }
+            }else if (myY < y && myX < x) { //Matar diagonal crescente para cima
+                for (int i = myX, j = myY; i <= x && j <= y; i++, j++) {
+                    if (tabuleiro[i][j] != null) {
+                        return true;
+                    }
+
+                }
+            }else if (myY > y && myX < x) { //Matar diagonal decrescente para cima
+                for (int i = myX, j = myY; i >= x && j <= y; i--, j++) {
+                    if (tabuleiro[i][j] != null) {
+                        return true;
+                    }
+                }
+            }else if (myY < y && myX > x) { //Matar diagonal decrescente para cima
+                for (int i = myX, j = myY; i <= x && j >= y; i++, j--) {
+                    if (tabuleiro[i][j] != null) {
+                        return true;
+                    }
+
+                }
             }
 
-            for (int i = myX, j = muY; i >= x && j >= y; i--,j--) {
-                if(tabuleiro[i][j] != null){
-                    return true;
-                }
-                if(i == x)
-                    x++;
-                if(j== y)
-                    j++;
-            }
-
-            for (int i = myX, j = muY; i <= x && j >= y; i++,j--) {
-                if(tabuleiro[i][j] != null){
-                    return true;
-                }
-                if(i == x)
-                    x--;
-                if(j== y)
-                    j++;
-            }
-
-            for (int i = myX, j = muY; i <= x && j >= y; i--,j++) {
-                if(tabuleiro[i][j] != null){
-                    return true;
-                }
-                if(i == x)
-                    x++;
-                if(j== y)
-                    j--;
-            }
         return false;
     }
 }
