@@ -15,7 +15,7 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
 
     private static final float CELL_SIZE = 100f;
     private OrthographicCamera camera;
-    protected static Piece[][]pieces;
+    private static Piece[][]pieces;
     private boolean vezBranco = true;
     CalculateTurn calculateTurn;
 
@@ -143,7 +143,7 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
     @Override
     public Queen upgradePiece(Piece peca,int getx,int gety){
         PieceBuilder pb = new PieceBuilder();
-        pb.setCoord(peca.getPosX(), peca.getPosY());
+        pb.setCoord(getx, gety);
         pb.setActive(true);
         pb.setType("queen");
         pb.setFigure("piece/"+peca.getColor().name()+"_queen.png");

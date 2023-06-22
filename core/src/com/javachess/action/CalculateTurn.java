@@ -14,7 +14,7 @@ public class CalculateTurn {
     }
 
     public boolean isChecked(boolean vezBranco){
-        //System.out.println("ENTREI AQUI1");
+        System.out.println("ENTREI AQUI1");
 
         for (Piece[] peca: tabuleiro){ //esse for passa por cada camada do tabuleiro verificando
             for (int cont = 0; cont < 8; cont++) {
@@ -26,7 +26,7 @@ public class CalculateTurn {
                 }
             }
         }
-        //System.out.println("ENTREI AQUI");
+        System.out.println("ENTREI AQUI");
         //aqui vejo se existe alguma peca do tabuleiro inimiga que pode ir para a posição do rei
         for (Piece[] peca: tabuleiro){ //esse for passa por cada camada do tabuleiro verificando
             for (int cont = 0; cont < 8; cont++) {
@@ -44,59 +44,46 @@ public class CalculateTurn {
     static public boolean isOverwrite(Piece peca,int x,int y){
         int myX = peca.getPosX()/100;//posiçoes da peca convertida
         int muY = peca.getPosY()/100;
-        int contador;
 
-            if(myX == x && muY != y && Math.abs(muY - y) > 1){
-                for(contador = muY+1; contador < Math.abs(muY - y); contador++){
-                    if(tabuleiro[myX][contador] != null) return true;
+            for (int i = myX, j = muY; i <= x && j<=y; i++,j++) {
+                if (tabuleiro[i][j] != null) {
+                    return true;
                 }
+                if (i == x)
+                    x--;
+                if (j == y)
+                    j--;
             }
 
-            if(muY == y && myX != x && Math.abs(myX - x) > 1){
-                for(contador = myX+1; contador < Math.abs(myX - x); contador++){
-                    if(tabuleiro[contador][muY] != null) return true;
+            for (int i = myX, j = muY; i >= x && j >= y; i--,j--) {
+                if(tabuleiro[i][j] != null){
+                    return true;
                 }
+                if(i == x)
+                    x++;
+                if(j== y)
+                    j++;
             }
 
-            // for (int i = myX, j = muY; i <= x && j<=y; i++,j++) {
-            //     if (tabuleiro[i][j] != null) {
-            //         return true;
-            //     }
-            //     if (i == x)
-            //         x--;
-            //     if (j == y)
-            //         j--;
-            // }
+            for (int i = myX, j = muY; i <= x && j >= y; i++,j--) {
+                if(tabuleiro[i][j] != null){
+                    return true;
+                }
+                if(i == x)
+                    x--;
+                if(j== y)
+                    j++;
+            }
 
-            // for (int i = myX, j = muY; i >= x && j >= y; i--,j--) {
-            //     if(tabuleiro[i][j] != null){
-            //         return true;
-            //     }
-            //     if(i == x)
-            //         x++;
-            //     if(j== y)
-            //         j++;
-            // }
-
-            // for (int i = myX, j = muY; i <= x && j >= y; i++,j--) {
-            //     if(tabuleiro[i][j] != null){
-            //         return true;
-            //     }
-            //     if(i == x)
-            //         x--;
-            //     if(j== y)
-            //         j++;
-            // }
-
-            // for (int i = myX, j = muY; i <= x && j >= y; i--,j++) {
-            //     if(tabuleiro[i][j] != null){
-            //         return true;
-            //     }
-            //     if(i == x)
-            //         x++;
-            //     if(j== y)
-            //         j--;
-            // }
+            for (int i = myX, j = muY; i <= x && j >= y; i--,j++) {
+                if(tabuleiro[i][j] != null){
+                    return true;
+                }
+                if(i == x)
+                    x++;
+                if(j== y)
+                    j--;
+            }
         return false;
     }
 }
