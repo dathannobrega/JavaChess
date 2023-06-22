@@ -17,7 +17,6 @@ public class Knight extends Piece {
         }else if((getPosX() == x-200 && getPosY() - 100  == y ) || (getPosX() == x - 200 && getPosY() + 100  == y ) ){// pra esquerda cima ou embaixo
             return true;
         } else {
-            System.out.println("MOVIMENTO INVALIDO");
             return false;
         }
     }

@@ -1,5 +1,7 @@
 package pieces;
 
+import com.javachess.action.CalculateTurn;
+
 public class Rook extends Piece {
     public Rook(boolean active, PieceType.Color color, String figure,int posX,int posY,String type) {
         super(active, color, figure,posX,posY,type);
@@ -10,7 +12,7 @@ public class Rook extends Piece {
         x = x * 100;
         y = y * 100;
 
-        if(x == getPosX() || y == getPosY()){
+        if((x == getPosX() || y == getPosY()) && !CalculateTurn.isOverwrite(this,x,y)){
             return true;
         } else
             return false;

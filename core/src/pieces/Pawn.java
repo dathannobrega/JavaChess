@@ -1,5 +1,7 @@
 package pieces;
 
+import com.javachess.action.CalculateTurn;
+import com.javachess.action.ChessInputProcessor;
 import pieces.builders.PieceBuilder;
 
 public class Pawn extends Piece {
@@ -14,30 +16,33 @@ public class Pawn extends Piece {
         x = x * 100;
         y = y * 100;
 
+        //if(CalculateTurn.isOverwrite(this,x,y))
+        //    return false;
+
         if(isFirst){
             this.isFirst = false; // ja seta para nunca mais entrar
             if (getColor() == PieceType.Color.white) {
-                if (getPosX() == x && getPosY() + 100 == y || getPosX() == x && getPosY() + 200 == y) {// 200 pois é necessario uma posição completa
+                if (getPosX() == x && (getPosY() + 100 == y || getPosY() + 200 == y)) {// 200 pois é necessario uma posição completa
                     return true;
                 } else {
                     return false;
                 }
-            }else {
-                if (getPosX() == x && getPosY() - 100 == y || getPosX() == x && getPosY() - 200 == y) { // 200 pois é necessario uma posição completa
+            } else {
+                if (getPosX() == x && (getPosY() - 100 == y || getPosY() - 200 == y)) { // 200 pois é necessario uma posição completa
                     return true;
                 } else {
                     return false;
                 }
             }
         } else {
-            if (getColor() == PieceType.Color.white) {
-                if (getPosX() == x && getPosY() + 100 == y) { // 100 pois é necessario uma posição completa
+            if (getColor() == PieceType.Color.white) { // permite q a peça mova para frente e para os lados.
+                if ((getPosY() + 100 == y && (getPosX() == x || Math.abs(x-getPosX()) == 100)) && ChessInputProcessor.killPawn(this,x/100,y/100)) {
                     return true;
                 } else {
                     return false;
                 }
             }else{
-                if (getPosX() == x && getPosY() - 100 == y) { // 100 pois é necessario uma posição completa
+                if ((getPosY() - 100 == y && (getPosX() == x || Math.abs(x-getPosX()) == 100)) && ChessInputProcessor.killPawn(this,x/100,y/100)){
                     return true;
                 } else {
                     return false;
