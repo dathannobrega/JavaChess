@@ -12,7 +12,7 @@ public class Rook extends Piece {
         x = x * 100;
         y = y * 100;
 
-        if((x == getPosX() || y == getPosY()) && !CalculateTurn.isOverwrite(this,x,y)){
+        if((x == getPosX() || y == getPosY()) && !CalculateTurn.isPieceBlocked(this,x,y)){
             return true;
         } else
             return false;

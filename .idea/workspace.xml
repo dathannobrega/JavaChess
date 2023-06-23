@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Algumas Coisas">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +70,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QdAXbnZNnnB5lrLSkpcU3PMPk4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -235,6 +241,8 @@
       <workItem from="1686670326746" duration="2143000" />
       <workItem from="1686928746245" duration="1504000" />
       <workItem from="1687405570769" duration="4652000" />
+      <workItem from="1687481413319" duration="142000" />
+      <workItem from="1687481641666" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="bug Friend kill fixed">
       <created>1685746172437</created>
@@ -287,5 +295,16 @@
     <MESSAGE value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
     <MESSAGE value="Algumas Coisas" />
     <option name="LAST_COMMIT_MESSAGE" value="Algumas Coisas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/pieces/Queen.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

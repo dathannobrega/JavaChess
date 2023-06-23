@@ -19,8 +19,8 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             pixY = getY*100;
             pixX = getX*100;
 
-            if(calculateTurn.isChecked(isVezBranco()))
-                System.out.println("esta de Check");
+            //if(calculateTurn.isChecked(isVezBranco()))
+                //System.out.println("esta de Check");
 
             if(selectedPiece == null) { // é porque não tem nada selecionado
                 for (Piece[] peca : getPieces()) {
