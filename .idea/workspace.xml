@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão">
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Algumas Coisas">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +64,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QdAXbnZNnnB5lrLSkpcU3PMPk4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,7 +80,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Test&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Moviments&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -235,6 +240,9 @@
       <workItem from="1686452372357" duration="852000" />
       <workItem from="1686670326746" duration="2143000" />
       <workItem from="1686928746245" duration="1504000" />
+      <workItem from="1687405570769" duration="4652000" />
+      <workItem from="1687481413319" duration="142000" />
+      <workItem from="1687481641666" duration="37000" />
     </task>
     <task id="LOCAL-00001" summary="bug Friend kill fixed">
       <created>1685746172437</created>
@@ -257,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686671780485</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Algumas Coisas">
+      <created>1687405657830</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687405657830</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,19 +283,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="moviments" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -290,6 +293,18 @@
     <MESSAGE value="bug Friend kill fixed" />
     <MESSAGE value="movimentos e selecção arrumados, alguns bugs presentes" />
     <MESSAGE value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
+    <MESSAGE value="Algumas Coisas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algumas Coisas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/src/pieces/Queen.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

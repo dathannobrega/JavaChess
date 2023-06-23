@@ -12,7 +12,7 @@ public class Queen extends Piece {
 
 
 
-        if(!CalculateTurn.isOverwrite(this,x,y)){
+        if(!CalculateTurn.isPieceBlocked(this,x,y)){
 
             if(x == getPosX()/100 || y == getPosY()/100)
                 return true;
