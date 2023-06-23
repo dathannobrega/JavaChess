@@ -44,6 +44,10 @@ public class CalculateTurn {
         int currentX = piece.getPosX() / 100; // converted piece positions
         int currentY = piece.getPosY() / 100;
 
+        if (currentX == x && currentY == y) {
+            return false;
+        }
+
         if (currentY == y && currentX < x) { // if capturing a piece to the right
             for (int i = currentX + 1; i <= x; i++) {
                 if (tabuleiro[i][currentY] != null) {
@@ -68,19 +72,25 @@ public class CalculateTurn {
                     return true;
                 }
             }
-        } else if (currentY > y && currentX > x) { // if capturing diagonally downwards
+        } else if (currentY > y && currentX > x) { // if capturing diagonally downwards '/'
             for (int i = currentX - 1, j = currentY - 1; i >= x && j >= y; i--, j--) {
                 if (tabuleiro[i][j] != null) {
                     return true;
                 }
             }
-        } else if (currentY < y && currentX < x) { // if capturing diagonally upwards
+        } else if (currentY < y && currentX < x) { // if capturing diagonally upwards '/'
             for (int i = currentX + 1, j = currentY + 1; i <= x && j <= y; i++, j++) {
                 if (tabuleiro[i][j] != null) {
                     return true;
                 }
             }
-        } else if (currentY < y && currentX > x) { // if capturing diagonally downwards (different direction)
+        } else if (currentY > y && currentX < x) { // if capturing diagonally downwards (different direction '\')
+            for (int i = currentX + 1, j = currentY - 1; i <= x && j >= y; i++, j--) {
+                if (tabuleiro[i][j] != null) {
+                    return true;
+                }
+            }
+        } else if (currentY < y && currentX > x) { // if capturing diagonally downwards (different direction '\')
             for (int i = currentX - 1, j = currentY + 1; i >= x && j <= y; i--, j++) {
                 if (tabuleiro[i][j] != null) {
                     return true;

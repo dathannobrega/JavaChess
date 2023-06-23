@@ -6,12 +6,8 @@ public class King extends Piece {
     }
     @Override
     public boolean validMov(int x, int y) {
-        x = x * 100;
-        y = y * 100;
-        if(y == getPosY() + 100 || getPosX() + 100 == x){
-            return true;
-        } else
-            return false;
+
+        return !(y > getPosY()/100 + 1 || x > getPosX()/100 + 1 || y < getPosY()/100 - 2 || x < getPosX()/100 - 2);
     }
 
     @Override
