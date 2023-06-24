@@ -6,18 +6,17 @@ import pieces.PieceType;
 import pieces.builders.PieceBuilder;
 
 public class CreatePieces {
-    private Piece [][]piece;
+    private final Piece [][]piece;
 
-    public CreatePieces(Piece[][] piece){
+    public CreatePieces(){
         //criação das peças pretas
-        piece = new Piece[8][8];
-        this.piece = piece;
+        this.piece = new Piece[8][8];
     }
 
 
     public Piece[][] createPiece(){    //ESSA FUNÇÃO que retonar as peças instanciadas
         PieceBuilder pb = new PieceBuilder(); // builder
-        //aqui estou definindo padroes gerais para todas essas peças pretas, eu seto a imagem, cordenada crio um e corndenada dps crio outro.
+        //aqui defino padroes gerais para todas essas peças pretas, eu seto a imagem, cordenada crio um e corndenada dps crio outro.
         pb.setColor(PieceType.Color.white);
         pb.setActive(true);
         //já aqui é personalizado devdo a imagem de cada 1;
