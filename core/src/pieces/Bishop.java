@@ -3,6 +3,7 @@ package pieces;
 import com.javachess.action.CalculateTurn;
 
 public class Bishop extends Piece {
+
     public Bishop(boolean active, PieceType.Color color, String figure,int posX,int posY,String type) {
         super(active, color, figure,posX,posY,type);
     }
@@ -33,11 +34,5 @@ public class Bishop extends Piece {
         }
 
         return false;
-    }
-
-    @Override
-    public void move(int x, int y) {
-        this.setPosX(x);
-        this.setPosY(y);
     }
 }

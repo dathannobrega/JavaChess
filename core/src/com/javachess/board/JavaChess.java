@@ -1,12 +1,21 @@
 package com.javachess.board;
 
+import javax.swing.ViewportLayout;
+
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextArea;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.javachess.action.ImpChessInputProcessor;
 import pieces.Piece;
 
@@ -17,8 +26,6 @@ public class JavaChess extends ApplicationAdapter {
 	private Texture squad;
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
-	private TextureRegion region;
-
 	private Piece [][]pieces;
 
 
@@ -27,6 +34,7 @@ public class JavaChess extends ApplicationAdapter {
 		//sobre a tela do jogo
 		float screenWidth = Gdx.graphics.getWidth();
 		float screenHeight = Gdx.graphics.getHeight();
+
 		//criação do tabuleiro em si
 		squad = new Texture("squad.png");
 		camera = new OrthographicCamera(screenWidth, screenHeight);

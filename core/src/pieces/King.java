@@ -9,10 +9,4 @@ public class King extends Piece {
 
         return !(y > getPosY()/100 + 1 || x > getPosX()/100 + 1 || y < getPosY()/100 - 2 || x < getPosX()/100 - 2);
     }
-
-    @Override
-    public void move(int x, int y) {
-        this.setPosX(x);
-        this.setPosY(y);
-    }
 }

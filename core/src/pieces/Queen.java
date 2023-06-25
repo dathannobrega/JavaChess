@@ -10,8 +10,6 @@ public class Queen extends Piece {
     @Override
     public boolean validMov(int x, int y) { // para verificar a rainha, peguei todas as regras do bispo e da torre
 
-
-
         if(!CalculateTurn.isPieceBlocked(this,x,y)){
 
             if(x == getPosX()/100 || y == getPosY()/100)
@@ -35,11 +33,5 @@ public class Queen extends Piece {
             }
         }
         return false;
-    }
-
-    @Override
-    public void move(int x, int y) {
-        this.setPosX(x);
-        this.setPosY(y);
     }
 }

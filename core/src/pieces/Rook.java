@@ -15,11 +15,4 @@ public class Rook extends Piece {
         } else
             return false;
     }
-
-    @Override
-    public void move(int x, int y) {
-
-        this.setPosX(x);
-        this.setPosY(y);
-    }
 }

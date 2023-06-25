@@ -2,7 +2,7 @@ package pieces;
 
 import com.javachess.action.ChessInputProcessor;
 
-public class    Pawn extends Piece {
+public class Pawn extends Piece {
 
     private boolean isFirst = true;
     public Pawn(boolean active, PieceType.Color color, String figure, int posX, int posY, String type) {

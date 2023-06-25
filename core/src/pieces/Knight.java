@@ -20,10 +20,4 @@ public class Knight extends Piece {
             return false;
         }
     }
-
-    @Override
-    public void move(int x , int y) {
-        this.setPosX(x);
-        this.setPosY(y);
-    }
 }

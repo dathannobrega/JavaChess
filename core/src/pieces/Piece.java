@@ -11,7 +11,7 @@ public abstract class Piece {
     private int posY;
 
     //construtor
-    public Piece(boolean active, PieceType.Color color, String figure,int posX,int posY, String type) {
+    public Piece(boolean active, PieceType.Color color, String figure, int posX, int posY, String type) {
         this.active = active;
         this.color = color;
         this.figure = new Texture(figure);
@@ -21,12 +21,11 @@ public abstract class Piece {
     }
 
     // esses Metodos abstratos que cada filho tera e será personalizado;
-    public boolean validMov(int x, int y) { // Função para verificar se existe uma peca amiga "" na pos
-        return true;
-    }
-
+    public abstract boolean validMov(int x, int y);
+    
     public void move(int x, int y) {
-
+        this.setPosX(x);
+        this.setPosY(y);
     }
 
     //Metodos Gets e Setters

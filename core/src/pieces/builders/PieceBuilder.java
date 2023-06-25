@@ -11,6 +11,7 @@ public class PieceBuilder implements Builder,Result{
 
     private int posX;
     private int posY;
+    
     @Override
     public void setActive(boolean active){
         this.active = active;

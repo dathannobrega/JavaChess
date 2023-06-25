@@ -10,7 +10,4 @@ public class PieceType { // classe usada para atributos gerais das Peças
         }
 
     }
-
-
-
 }
