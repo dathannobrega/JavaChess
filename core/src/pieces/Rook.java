@@ -3,8 +3,8 @@ package pieces;
 import com.javachess.action.CalculateTurn;
 
 public class Rook extends Piece {
-    public Rook(boolean active, PieceType.Color color, String figure,int posX,int posY,String type) {
-        super(active, color, figure,posX,posY,type);
+    public Rook(PieceType.Color color, String figure, int posX, int posY, String type) {
+        super(color, figure,posX,posY,type);
     }
 
     @Override

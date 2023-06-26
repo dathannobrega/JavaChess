@@ -10,7 +10,7 @@ public class CalculateTurn {
     Piece selectedPiece;
 
     public CalculateTurn(Piece[][] tabuleiro) {
-        this.tabuleiro = tabuleiro;
+        CalculateTurn.tabuleiro = tabuleiro;
     }
 
     public boolean isChecked(boolean vezBranco) {

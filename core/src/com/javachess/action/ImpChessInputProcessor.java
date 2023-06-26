@@ -2,12 +2,14 @@ package com.javachess.action;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.javachess.board.Tabuleiro;
 import pieces.Piece;
 public class ImpChessInputProcessor extends ChessInputProcessor{
     private Piece selectedPiece;
+    Tabuleiro tabuleiro = Tabuleiro.getInstance();
 
     public ImpChessInputProcessor(OrthographicCamera camera, Piece[][] pieces) {
-        super(camera, pieces);
+        super(pieces);
     }
 
     @Override
@@ -19,7 +21,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             pixY = getY*100;
             pixX = getX*100;
 
-            if(calculateTurn.isChecked(isVezBranco()))
+            if(calculateTurn.isChecked(tabuleiro.isVezBranco()))
                 System.out.println("esta de Check");
 
             if(selectedPiece == null) { // é porque não tem nada selecionado
@@ -27,7 +29,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                     for (int cont = 0; cont < 8; cont++) {
                         if (peca[cont] != null){
                             if (peca[cont].getPosX() / 100 == getX && peca[cont].getPosY() / 100 == getY) {
-                                if(confirmaVez(peca[cont])){// se for a vez do branco a peca é selecionada
+                                if(tabuleiro.confirmaVez(peca[cont])){// se for a vez do branco a peca é selecionada
                                     selectedPiece = peca[cont];
                                     selectedPiece.setFigure("piece/"+peca[cont].getColor().name() + "_"+peca[cont].getType()+"_"+ "selected.png");
                                 }
@@ -42,10 +44,10 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                     for (int j = 0; j < 8; j++) {
                         if (pieces[i][j] != null) {
                             if (pieces[i][j] == selectedPiece) { // faz um comparativo para achar a peca selecionada anteriormente
-                                if (pieces[i][j].validMov(getX, getY) && verifyEntity(selectedPiece, getX, getY)) {
-                                    if (isPawn(selectedPiece)) {// verifica se a peca é um peao se sim tranforma em queen
-                                        if (verifyUpgrade(selectedPiece, getY))
-                                            selectedPiece = upgradePiece(selectedPiece,pixX,pixY);
+                                if (pieces[i][j].validMov(getX, getY) && tabuleiro.verifyEntity(selectedPiece, getX, getY)) {
+                                    if (tabuleiro.isPawn(selectedPiece)) {// verifica se a peca é um peao se sim tranforma em queen
+                                        if (tabuleiro.verifyUpgrade(selectedPiece, getY))
+                                            selectedPiece = tabuleiro.upgradePiece(selectedPiece, pixX, pixY);
                                     }
                                     //Aqui vai ficar um observer para coletar os logs
                                     notifica(selectedPiece, getX, getY);
@@ -53,7 +55,7 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                                     pieces[i][j].move(pixX, pixY);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
-                                    trocaVez();
+                                    tabuleiro.trocaVez();
                                 }
 
                             }
