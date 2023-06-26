@@ -35,32 +35,32 @@ public class PieceBuilder implements Builder,Result{
 
     @Override
     public Pawn getResultPawn() {
-        return new Pawn(active, color, figure, posX, posY,type);
+        return new Pawn(color, figure, posX, posY,type);
     }
 
     @Override
     public Rook getResultRook() {
-        return new Rook(active, color, figure, posX, posY,type);
+        return new Rook(color, figure, posX, posY,type);
     }
 
     @Override
     public Queen getResultQueen() {
-        return new Queen(active, color, figure, posX, posY,type);
+        return new Queen(color, figure, posX, posY,type);
     }
 
     @Override
     public Knight getResultKnigth() {
-        return new Knight(active, color, figure, posX, posY,type);
+        return new Knight(color, figure, posX, posY,type);
     }
 
     @Override
     public King getResultKing() {
-        return new King(active, color, figure, posX, posY,type);
+        return new King(color, figure, posX, posY,type);
     }
 
     @Override
     public Bishop getResultBishop() {
-        return new Bishop(active, color, figure, posX, posY,type);
+        return new Bishop(color, figure, posX, posY,type);
     }
     @Override
     public String getType() {

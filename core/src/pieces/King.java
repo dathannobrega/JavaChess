@@ -1,8 +1,8 @@
 package pieces;
 
 public class King extends Piece {
-    public King(boolean active, PieceType.Color color, String figure,int posX,int posY,String type) {
-        super(active, color, figure,posX,posY,type);
+    public King(PieceType.Color color, String figure,int posX,int posY,String type) {
+        super(color, figure,posX,posY,type);
     }
     @Override
     public boolean validMov(int x, int y) {
