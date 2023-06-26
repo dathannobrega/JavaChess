@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Any fixes for CalculateTurn.java , Rook and Queen moviments">
-      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/logScreen/LogScreen.java" afterDir="false" />
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Algumas Coisas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/SubjectObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/SubjectObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,25 +72,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Moviments&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\datha\IdeaProjects\JavaChess\assets" />
@@ -239,10 +237,9 @@
       <workItem from="1686452372357" duration="852000" />
       <workItem from="1686670326746" duration="2143000" />
       <workItem from="1686928746245" duration="1504000" />
-      <workItem from="1687405570769" duration="5939000" />
+      <workItem from="1687405570769" duration="4652000" />
       <workItem from="1687481413319" duration="142000" />
       <workItem from="1687481641666" duration="37000" />
-      <workItem from="1687569773120" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="bug Friend kill fixed">
       <created>1685746172437</created>
@@ -272,21 +269,7 @@
       <option name="project" value="LOCAL" />
       <updated>1687405657830</updated>
     </task>
-    <task id="LOCAL-00005" summary="Any fixes for CalculateTurn.java">
-      <created>1687469500113</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687469500113</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Any fixes for CalculateTurn.java , Rook and Queen moviments">
-      <created>1687487008273</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687487008273</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,9 +291,7 @@
     <MESSAGE value="movimentos e selecção arrumados, alguns bugs presentes" />
     <MESSAGE value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
     <MESSAGE value="Algumas Coisas" />
-    <MESSAGE value="Any fixes for CalculateTurn.java" />
-    <MESSAGE value="Any fixes for CalculateTurn.java , Rook and Queen moviments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Any fixes for CalculateTurn.java , Rook and Queen moviments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Algumas Coisas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

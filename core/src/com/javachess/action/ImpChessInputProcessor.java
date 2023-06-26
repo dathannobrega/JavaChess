@@ -63,7 +63,6 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                 selectedPiece.setFigure("piece/" + selectedPiece.getColor().name() + "_" + selectedPiece.getType() + ".png");
                 selectedPiece = null; // limpa para o proximo movimento
             }
-            //System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
         }
         return false;
     }

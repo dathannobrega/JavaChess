@@ -42,7 +42,7 @@ public class JavaChess extends ApplicationAdapter {
 		camera = new OrthographicCamera(screenWidth, screenHeight);
 		camera.setToOrtho(false); // FAZER DOCUMENTAÇÂO
 		//criação das piecas
-		CreatePieces create = new CreatePieces(pieces);
+		CreatePieces create = new CreatePieces();
 		pieces = create.createPiece();
 
 		//onde eu instancio as ações do mouse
