@@ -50,49 +50,49 @@ public class CalculateTurn {
 
         if (currentY == y && currentX < x) { // if capturing a piece to the right
             for (int i = currentX + 1; i <= x; i++) {
-                if (tabuleiro[i][currentY] != null) {
+                if (tabuleiro[i][currentY] != null && !(i == x)) {
                     return true;
                 }
             }
         } else if (currentY == y && currentX > x) { // if capturing a piece to the left
             for (int i = currentX - 1; i >= x; i--) {
-                if (tabuleiro[i][currentY] != null) {
+                if (tabuleiro[i][currentY] != null && !(i == x)) {
                     return true;
                 }
             }
         } else if (currentY < y && currentX == x) { // if capturing upwards
             for (int j = currentY + 1; j <= y; j++) {
-                if (tabuleiro[currentX][j] != null) {
+                if (tabuleiro[currentX][j] != null && !(j==y)) {
                     return true;
                 }
             }
         } else if (currentY > y && currentX == x) { // if capturing downwards
             for (int j = currentY - 1; j >= y; j--) {
-                if (tabuleiro[currentX][j] != null) {
+                if (tabuleiro[currentX][j] != null && !(j==y)) {
                     return true;
                 }
             }
         } else if (currentY > y && currentX > x) { // if capturing diagonally downwards '/'
             for (int i = currentX - 1, j = currentY - 1; i >= x && j >= y; i--, j--) {
-                if (tabuleiro[i][j] != null) {
+                if (tabuleiro[i][j] != null && !(j==y && i == x)) {
                     return true;
                 }
             }
         } else if (currentY < y && currentX < x) { // if capturing diagonally upwards '/'
             for (int i = currentX + 1, j = currentY + 1; i <= x && j <= y; i++, j++) {
-                if (tabuleiro[i][j] != null) {
+                if (tabuleiro[i][j] != null && !(j==y && i == x)) {
                     return true;
                 }
             }
         } else if (currentY > y && currentX < x) { // if capturing diagonally downwards (different direction '\')
             for (int i = currentX + 1, j = currentY - 1; i <= x && j >= y; i++, j--) {
-                if (tabuleiro[i][j] != null) {
+                if (tabuleiro[i][j] != null && !(j==y && i == x)) {
                     return true;
                 }
             }
         } else if (currentY < y && currentX > x) { // if capturing diagonally downwards (different direction '\')
             for (int i = currentX - 1, j = currentY + 1; i >= x && j <= y; i--, j++) {
-                if (tabuleiro[i][j] != null) {
+                if (tabuleiro[i][j] != null && !(j==y && i == x)) {
                     return true;
                 }
             }

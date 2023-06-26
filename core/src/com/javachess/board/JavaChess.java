@@ -4,6 +4,7 @@ import javax.swing.ViewportLayout;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -15,7 +16,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextArea;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.javachess.action.ImpChessInputProcessor;
 import pieces.Piece;
 
@@ -26,6 +26,8 @@ public class JavaChess extends ApplicationAdapter {
 	private Texture squad;
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
+	private TextureRegion region;
+
 	private Piece [][]pieces;
 
 
@@ -44,7 +46,7 @@ public class JavaChess extends ApplicationAdapter {
 		pieces = create.createPiece();
 
 		//onde eu instancio as ações do mouse
-		Gdx.input.setInputProcessor(mouse = new ImpChessInputProcessor(camera,pieces));
+		Gdx.input.setInputProcessor(new ImpChessInputProcessor(camera,pieces));
 
 		batch = new SpriteBatch();
 	}
