@@ -27,7 +27,6 @@ public class JavaChess extends ApplicationAdapter {
 	private OrthographicCamera camera;
 	private SpriteBatch batch;
 	private TextureRegion region;
-
 	private Piece [][]pieces;
 
 
@@ -42,8 +41,8 @@ public class JavaChess extends ApplicationAdapter {
 		camera = new OrthographicCamera(screenWidth, screenHeight);
 		camera.setToOrtho(false); // FAZER DOCUMENTAÇÂO
 		//criação das piecas
-		CreatePieces create = new CreatePieces();
-		pieces = create.createPiece();
+		Tabuleiro tabuleiro= Tabuleiro.getInstance();
+		pieces = Tabuleiro.getPieces();
 
 		//onde eu instancio as ações do mouse
 		Gdx.input.setInputProcessor(new ImpChessInputProcessor(camera,pieces));

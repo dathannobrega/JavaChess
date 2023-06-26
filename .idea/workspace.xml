@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Algumas Coisas">
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto">
+      <change afterPath="$PROJECT_DIR$/core/src/com/javachess/board/Tabuleiro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/SubjectObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/SubjectObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +76,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Singleton__Feature",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -269,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687405657830</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto">
+      <option name="closed" value="true" />
+      <created>1687741236795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687741236795</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +298,8 @@
     <MESSAGE value="movimentos e selecção arrumados, alguns bugs presentes" />
     <MESSAGE value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
     <MESSAGE value="Algumas Coisas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Algumas Coisas" />
+    <MESSAGE value="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
