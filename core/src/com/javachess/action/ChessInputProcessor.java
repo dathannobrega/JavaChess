@@ -9,9 +9,9 @@ import pieces.PieceType;
 import pieces.Queen;
 import pieces.builders.PieceBuilder;
 
-//classe sera usada para "coletar os clcks da nossa interface."
+//classe sera usada para "coletar os clicks da nossa interface."
 //baseado em: https://libgdx.com/wiki/input/event-handling
-public abstract class ChessInputProcessor implements InputProcessor,Verification {
+public abstract class ChessInputProcessor implements InputProcessor,Verification,SubjectObserver {
 
     private static final float CELL_SIZE = 100f;
     private OrthographicCamera camera;
@@ -143,7 +143,7 @@ public abstract class ChessInputProcessor implements InputProcessor,Verification
     @Override
     public Queen upgradePiece(Piece peca,int getx,int gety){
         PieceBuilder pb = new PieceBuilder();
-        pb.setCoord(getx, gety);
+        pb.setCoord(getx, gety); // observar se esta dando certo essa transformação
         pb.setActive(true);
         pb.setType("queen");
         pb.setFigure("piece/"+peca.getColor().name()+"_queen.png");

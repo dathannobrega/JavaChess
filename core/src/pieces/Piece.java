@@ -28,6 +28,12 @@ public abstract class Piece {
         this.setPosY(y);
     }
 
+    public void upgrade(int x, int y){
+        System.out.println("Peca: " + this.getType() + " " + this.getColor());
+        System.out.println("De: [" + this.getPosX()/100 + "][" + this.getPosY()/100 + "]");
+        System.out.println("Para: [" + x + "][" + y + "]");
+    }
+
     //Metodos Gets e Setters
     public PieceType.Color getColor() {
         return color;

@@ -1,6 +1,5 @@
 package com.javachess.board;
 
-
 import pieces.Piece;
 import pieces.PieceType;
 import pieces.builders.PieceBuilder;

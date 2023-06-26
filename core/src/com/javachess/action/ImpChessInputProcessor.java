@@ -47,13 +47,13 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                                         if (verifyUpgrade(selectedPiece, getY))
                                             selectedPiece = upgradePiece(selectedPiece,pixX,pixY);
                                     }
+                                    //Aqui vai ficar um observer para coletar os logs
+                                    notifica(selectedPiece, getX, getY);
+                                    //
                                     pieces[i][j].move(pixX, pixY);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
                                     trocaVez();
-                                    //Aqui vai ficar um observer para coletar os logs
-                                    //
-                                    //
                                 }
 
                             }
@@ -63,8 +63,13 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                 selectedPiece.setFigure("piece/" + selectedPiece.getColor().name() + "_" + selectedPiece.getType() + ".png");
                 selectedPiece = null; // limpa para o proximo movimento
             }
-            System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
+            //System.out.println("Tabuleiro: X = "+ getX + " Y=" + getY);
         }
         return false;
+    }
+
+    @Override
+    public void notifica(Piece selectedPiece, int x, int y){
+        ((Piece) selectedPiece).upgrade(x, y);
     }
 }
