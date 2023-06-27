@@ -1,8 +1,10 @@
 package pieces;
 
+import pieces.strategy.MovementStrategy;
+
 public class Knight extends Piece {
-    public Knight(PieceType.Color color, String figure, int posX, int posY, String type) {
-        super(color, figure,posX,posY,type);
+    public Knight(MovementStrategy movementStrategy, PieceType.Color color, String figure, int posX, int posY, String type) {
+        super(movementStrategy,color, figure,posX,posY,type);
     }
     @Override
     public boolean validMov(int x, int y) {

@@ -1,13 +1,14 @@
 package pieces;
 
 import com.javachess.board.Tabuleiro;
+import pieces.strategy.MovementStrategy;
 
 
 public class Pawn extends Piece {
 
     private boolean isFirst = true;
-    public Pawn(PieceType.Color color, String figure, int posX, int posY, String type) {
-        super(color, figure,posX,posY,type);
+    public Pawn(MovementStrategy movementStrategy, PieceType.Color color, String figure, int posX, int posY, String type) {
+        super(movementStrategy,color, figure,posX,posY,type);
     }
 
     @Override
