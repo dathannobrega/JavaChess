@@ -3,7 +3,6 @@ package pieces;
 import com.badlogic.gdx.graphics.Texture;
 
 public abstract class Piece {
-    private boolean active;
     private final PieceType.Color color;
     private Texture figure;
     private String type;
@@ -11,8 +10,7 @@ public abstract class Piece {
     private int posY;
 
     //construtor
-    public Piece(boolean active, PieceType.Color color, String figure, int posX, int posY, String type) {
-        this.active = active;
+    public Piece(PieceType.Color color, String figure, int posX, int posY, String type) {
         this.color = color;
         this.figure = new Texture(figure);
         this.posX = posX;
@@ -37,14 +35,6 @@ public abstract class Piece {
     //Metodos Gets e Setters
     public PieceType.Color getColor() {
         return color;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
     }
 
     public Texture getFigure() {

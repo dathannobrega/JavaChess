@@ -1,12 +1,13 @@
 package pieces;
 
-import com.javachess.action.ChessInputProcessor;
+import com.javachess.board.Tabuleiro;
+
 
 public class Pawn extends Piece {
 
     private boolean isFirst = true;
-    public Pawn(boolean active, PieceType.Color color, String figure, int posX, int posY, String type) {
-        super(active, color, figure,posX,posY,type);
+    public Pawn(PieceType.Color color, String figure, int posX, int posY, String type) {
+        super(color, figure,posX,posY,type);
     }
 
     @Override
@@ -14,7 +15,7 @@ public class Pawn extends Piece {
         x = x * 100;
         y = y * 100;
 
-        //if(CalculateTurn.isOverwrite(this,x,y))
+        //if(CalculateTurn.isPieceBlocked(this,x/100,y/100))
         //    return false;
 
         if (isFirst) {
@@ -25,9 +26,9 @@ public class Pawn extends Piece {
             }
         } else {
             if (getColor() == PieceType.Color.white) {
-                return (getPosY() + 100 == y && (getPosX() == x || Math.abs(x - getPosX()) == 100)) && ChessInputProcessor.killPawn(this, x / 100, y / 100);
+                return (getPosY() + 100 == y && (getPosX() == x || Math.abs(x - getPosX()) == 100)) && Tabuleiro.killPawn(this, x / 100, y / 100);
             } else {
-                return (getPosY() - 100 == y && (getPosX() == x || Math.abs(x - getPosX()) == 100)) && ChessInputProcessor.killPawn(this, x / 100, y / 100);
+                return (getPosY() - 100 == y && (getPosX() == x || Math.abs(x - getPosX()) == 100)) && Tabuleiro.killPawn(this, x / 100, y / 100);
             }
         }
     }

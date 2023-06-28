@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Algumas Coisas">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Escopo Criado do Singleton para usar na criação do Tabuleiro.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/CalculateTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ChessInputProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/action/ImpChessInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/JavaChess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/Tabuleiro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,25 +82,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Moviments&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "Singleton__Feature",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\datha\IdeaProjects\JavaChess\assets" />
@@ -272,7 +280,23 @@
       <option name="project" value="LOCAL" />
       <updated>1687405657830</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto">
+      <option name="closed" value="true" />
+      <created>1687741236795</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687741236795</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Escopo Criado do Singleton para usar na criação do Tabuleiro.java">
+      <option name="closed" value="true" />
+      <created>1687745175095</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687745175095</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +318,9 @@
     <MESSAGE value="movimentos e selecção arrumados, alguns bugs presentes" />
     <MESSAGE value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
     <MESSAGE value="Algumas Coisas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Algumas Coisas" />
+    <MESSAGE value="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto" />
+    <MESSAGE value="Escopo Criado do Singleton para usar na criação do Tabuleiro.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Escopo Criado do Singleton para usar na criação do Tabuleiro.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

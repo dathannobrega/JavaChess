@@ -1,27 +1,19 @@
 package com.javachess.board;
 
-import javax.swing.ViewportLayout;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.TextArea;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.javachess.action.ImpChessInputProcessor;
+import com.javachess.dao.LogXadrezDAO;
+
 import pieces.Piece;
 
 public class JavaChess extends ApplicationAdapter {
 	private static final int GRID_SIZE = 8;
-	private ImpChessInputProcessor mouse;
 	private static final float CELL_SIZE = 100f;
 	private Texture squad;
 	private OrthographicCamera camera;
@@ -40,11 +32,14 @@ public class JavaChess extends ApplicationAdapter {
 		camera = new OrthographicCamera(screenWidth, screenHeight);
 		camera.setToOrtho(false); // FAZER DOCUMENTAÇÂO
 		//criação das piecas
-		CreatePieces create = new CreatePieces(pieces);
-		pieces = create.createPiece();
+		Tabuleiro tabuleiro = Tabuleiro.getInstance();
+		pieces = Tabuleiro.getPieces();
+
+		// iniciando a instância do banco
+		LogXadrezDAO.initialize();
 
 		//onde eu instancio as ações do mouse
-		Gdx.input.setInputProcessor(mouse = new ImpChessInputProcessor(camera,pieces));
+		Gdx.input.setInputProcessor(new ImpChessInputProcessor(camera,pieces));
 
 		batch = new SpriteBatch();
 	}
@@ -92,5 +87,6 @@ public class JavaChess extends ApplicationAdapter {
 	@Override
 	public void dispose() {
 		batch.dispose();
+		LogXadrezDAO.close();
 	}
 }
