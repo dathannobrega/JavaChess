@@ -8,12 +8,4 @@ public class Rook extends Piece {
         super(movementStrategy,color, figure,posX,posY,type);
     }
 
-    @Override
-    public boolean validMov(int x, int y) {
-
-        if((x == getPosX()/100 || y == getPosY()/100) && !CalculateTurn.isPieceBlocked(this,x,y)){
-            return true;
-        } else
-            return false;
-    }
 }

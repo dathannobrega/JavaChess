@@ -6,6 +6,7 @@ import pieces.Piece;
 import pieces.PieceType;
 import pieces.Queen;
 import pieces.builders.PieceBuilder;
+import pieces.strategy.QueenMovementStrategy;
 
 
 //nessa classe é importada o Singleton para o tabuleiro.
@@ -40,6 +41,7 @@ public class Tabuleiro implements Verification { // essa classe é o tabuleiro j
         pb.setCoord(getx, gety); // observar se esta dando certo essa transformação
         pb.setActive(true);
         pb.setType("queen");
+        pb.setMovementStrategy(new QueenMovementStrategy());
         pb.setFigure("piece/"+peca.getColor().name()+"_queen.png");
         if(peca.getColor() == PieceType.Color.white){
             pb.setColor(PieceType.Color.white);

@@ -11,6 +11,10 @@ public abstract class Piece {
     private int posX;
     private int posY;
 
+    public MovementStrategy getMovementStrategy() {
+        return movementStrategy;
+    }
+
     //construtor
     public Piece(MovementStrategy movementStrategy,PieceType.Color color, String figure, int posX, int posY, String type) {
         this.movementStrategy = movementStrategy;
@@ -23,7 +27,7 @@ public abstract class Piece {
 
     // esses Metodos abstratos que cada filho tera e será personalizado;
     public boolean validMov(int x, int y){
-        return movementStrategy.validMov(x, y);
+        return movementStrategy.validMov(this,posX,posY,x, y);
     }
     
     public void move(int x, int y) {
