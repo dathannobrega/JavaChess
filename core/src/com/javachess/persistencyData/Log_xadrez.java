@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import java.sql.Time;
 import java.util.Date;
 
+// essa clase armazena os dados antes do insert no banco
 @Entity
 public class Log_xadrez {
     @Id

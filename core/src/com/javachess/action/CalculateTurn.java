@@ -15,7 +15,7 @@ public class CalculateTurn {
 
     public boolean isChecked(boolean vezBranco) {
 
-        for (Piece[] peca : tabuleiro) { //esse for passa por cada camada do tabuleiro verificando
+        for (Piece[] peca : tabuleiro) { //esse for passa por cada camada do tabuleiro buscando o rei
             for (int cont = 0; cont < 8; cont++) {
                 if (peca[cont] != null && peca[cont] instanceof King) {
                     if (vezBranco && (peca[cont].getColor().name().equals("white"))) // seleciona o rei branco

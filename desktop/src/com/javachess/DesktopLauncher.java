@@ -8,7 +8,7 @@ import com.javachess.board.JavaChess;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-		config.setForegroundFPS(20);
+		config.setForegroundFPS(60);
 		config.setTitle("JavaChess");
 
 		config.setWindowedMode(800,800); // define a janela como 800 x 800 pixel
