@@ -2,6 +2,10 @@ package com.javachess.action;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.javachess.dao.LogXadrezDAO;
+
+import java.sql.Time;
+import java.util.Date;
 import pieces.Piece;
 public class ImpChessInputProcessor extends ChessInputProcessor{
     private Piece selectedPiece;
@@ -13,6 +17,8 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         int getX, getY,pixX,pixY;
+        Date dataAtual = new Date();
+        Time horaAtual;
         if(Gdx.input.isTouched()){
             getX = Gdx.input.getX()/100;
             getY = Math.abs( Gdx.input.getY()/100 -7); // por algum motivo o y esta errado e esta invertido pois a posicao 0,0 deve ficar no canto inferior esquerdo
@@ -49,7 +55,9 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                                     }
                                     //Aqui vai ficar um observer para coletar os logs
                                     notifica(selectedPiece, getX, getY);
-                                    //
+                                    // persistência de dados
+                                    LogXadrezDAO.addLogXadrez(dataAtual, selectedPiece.getType(), i, j, getX, getY, new Time(dataAtual.getTime()));
+                                    // movendo a peça
                                     pieces[i][j].move(pixX, pixY);
                                     pieces[getX][getY] = selectedPiece;
                                     pieces[i][j] = null;
