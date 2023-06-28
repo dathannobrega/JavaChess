@@ -1,11 +1,13 @@
 package pieces.builders;
 
 import pieces.PieceType;
+import pieces.strategy.MovementStrategy;
 
 public interface Builder {
-    public void setActive(boolean active);
-    public void setColor(PieceType.Color color);
-    public void setFigure(String figure);
-    public void setCoord(int posX,int posY);
-    public void setType(String type);
+    void setActive(boolean active);
+    void setColor(PieceType.Color color);
+    void setFigure(String figure);
+    void setCoord(int posX,int posY);
+    void setType(String type);
+    void setMovementStrategy(MovementStrategy movementStrategy);
 }

@@ -1,12 +1,10 @@
 package pieces;
 
-public class King extends Piece {
-    public King(PieceType.Color color, String figure,int posX,int posY,String type) {
-        super(color, figure,posX,posY,type);
-    }
-    @Override
-    public boolean validMov(int x, int y) {
+import pieces.strategy.MovementStrategy;
 
-        return !(y > getPosY()/100 + 1 || x > getPosX()/100 + 1 || y < getPosY()/100 - 2 || x < getPosX()/100 - 2);
+public class King extends Piece {
+    public King(MovementStrategy movementStrategy, PieceType.Color color, String figure, int posX, int posY, String type) {
+        super(movementStrategy,color, figure,posX,posY,type);
     }
+
 }

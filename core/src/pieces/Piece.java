@@ -1,16 +1,23 @@
 package pieces;
 
 import com.badlogic.gdx.graphics.Texture;
+import pieces.strategy.MovementStrategy;
 
 public abstract class Piece {
     private final PieceType.Color color;
+    private MovementStrategy movementStrategy;
     private Texture figure;
     private String type;
     private int posX;
     private int posY;
 
+    public MovementStrategy getMovementStrategy() {
+        return movementStrategy;
+    }
+
     //construtor
-    public Piece(PieceType.Color color, String figure, int posX, int posY, String type) {
+    public Piece(MovementStrategy movementStrategy,PieceType.Color color, String figure, int posX, int posY, String type) {
+        this.movementStrategy = movementStrategy;
         this.color = color;
         this.figure = new Texture(figure);
         this.posX = posX;
@@ -19,7 +26,9 @@ public abstract class Piece {
     }
 
     // esses Metodos abstratos que cada filho tera e será personalizado;
-    public abstract boolean validMov(int x, int y);
+    public boolean validMov(int x, int y){
+        return movementStrategy.validMov(this,posX,posY,x, y);
+    }
     
     public void move(int x, int y) {
         this.setPosX(x);
