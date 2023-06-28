@@ -34,9 +34,12 @@ public class JavaChess extends ApplicationAdapter {
 		//criação das piecas
 		Tabuleiro tabuleiro = Tabuleiro.getInstance();
 		pieces = Tabuleiro.getPieces();
+<<<<<<< HEAD
 
 		// iniciando a instância do banco
 		LogXadrezDAO.initialize();
+=======
+>>>>>>> e8387b2f569028a02d33e9aeac8a5011e1987dab
 
 		//onde eu instancio as ações do mouse
 		Gdx.input.setInputProcessor(new ImpChessInputProcessor(camera,pieces));

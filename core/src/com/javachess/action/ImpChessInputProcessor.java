@@ -5,10 +5,13 @@ import java.sql.Time;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.javachess.board.Tabuleiro;
+<<<<<<< HEAD
 import com.javachess.dao.LogXadrezDAO;
 
 import java.sql.Time;
 import java.util.Date;
+=======
+>>>>>>> e8387b2f569028a02d33e9aeac8a5011e1987dab
 import pieces.Piece;
 
 public class ImpChessInputProcessor extends ChessInputProcessor{
