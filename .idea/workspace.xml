@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="Escopo Criado do Singleton para usar na criação do Tabuleiro.java">
+    <list default="true" id="3d558212-6bf4-48a1-83bd-49200c331747" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/CreatePieces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/com/javachess/board/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/com/javachess/board/Tabuleiro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/King.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/builders/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/builders/Builder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/builders/PieceBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/BishopMovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/BishopMovementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/KingMovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/KingMovementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/KnightMovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/KnightMovementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/MovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/MovementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/PawnMovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/PawnMovementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/QueenMovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/QueenMovementStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/pieces/strategy/RookMovementStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/pieces/strategy/RookMovementStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +24,7 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/desktop">
-          <activation />
-        </task>
         <task path="$PROJECT_DIR$/core">
-          <activation />
-        </task>
-        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -54,6 +34,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="JavaChess" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="core" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="core" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JavaChess" type="f1a62948:ProjectNode" />
+                <item name="core" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -61,86 +59,56 @@
       </state>
     </system>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2QdAXbnZNnnB5lrLSkpcU3PMPk4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2Rr96mbJt3i5UUjmGWJDe0lq92T" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "Strategy__Feature",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "corretto-18",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\datha\IdeaProjects\JavaChess\assets" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Gradle.JavaChess:desktop [run]">
-    <configuration name="JavaChess [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
+  <component name="RunManager" selected="Application.DesktopLauncher">
+    <configuration name="DesktopLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javachess.DesktopLauncher" />
+      <module name="JavaChess.desktop.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javachess.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="JavaChess:desktop [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JavaChess:core [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/core" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -148,73 +116,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="buildDependents" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="JavaChess:desktop [buildEnvironment]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildEnvironment" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="JavaChess:desktop [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="JavaChess:desktop [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testClasses" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -227,106 +129,34 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.JavaChess:desktop [run]" />
-        <item itemvalue="Gradle.JavaChess:desktop [testClasses]" />
-        <item itemvalue="Gradle.JavaChess:desktop [buildEnvironment]" />
-        <item itemvalue="Gradle.JavaChess:desktop [buildDependents]" />
-        <item itemvalue="Gradle.JavaChess [dependencies]" />
+        <item itemvalue="Gradle.JavaChess:core [build]" />
+        <item itemvalue="Application.DesktopLauncher" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1977c3d6-fe8d-49f9-bd66-e79eaceb8432" name="Changes" comment="" />
-      <created>1685673126665</created>
+      <changelist id="3d558212-6bf4-48a1-83bd-49200c331747" name="Changes" comment="" />
+      <created>1687997164251</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685673126665</updated>
-      <workItem from="1685673127977" duration="2988000" />
-      <workItem from="1685743484365" duration="3168000" />
-      <workItem from="1685748239463" duration="10170000" />
-      <workItem from="1686097235382" duration="3460000" />
-      <workItem from="1686105225769" duration="3025000" />
-      <workItem from="1686270920993" duration="4283000" />
-      <workItem from="1686344530512" duration="1168000" />
-      <workItem from="1686403259364" duration="18062000" />
-      <workItem from="1686452317704" duration="17000" />
-      <workItem from="1686452372357" duration="852000" />
-      <workItem from="1686670326746" duration="2143000" />
-      <workItem from="1686928746245" duration="1504000" />
-      <workItem from="1687405570769" duration="4652000" />
-      <workItem from="1687481413319" duration="142000" />
-      <workItem from="1687481641666" duration="37000" />
+      <updated>1687997164251</updated>
+      <workItem from="1687997167465" duration="1819000" />
     </task>
-    <task id="LOCAL-00001" summary="bug Friend kill fixed">
-      <created>1685746172437</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1685746172437</updated>
-    </task>
-    <task id="LOCAL-00002" summary="movimentos e selecção arrumados, alguns bugs presentes">
-      <created>1686271007818</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1686271007818</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão">
-      <created>1686671780485</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1686671780485</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Algumas Coisas">
-      <created>1687405657830</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1687405657830</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto">
-      <option name="closed" value="true" />
-      <created>1687741236795</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687741236795</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Escopo Criado do Singleton para usar na criação do Tabuleiro.java">
-      <option name="closed" value="true" />
-      <created>1687745175095</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687745175095</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug Friend kill fixed" />
-    <MESSAGE value="movimentos e selecção arrumados, alguns bugs presentes" />
-    <MESSAGE value="Tentativa de fazer verificação de check e arrumar bug de peça pular qualquer uma, foi arrumado alguns movimentos do peão" />
-    <MESSAGE value="Algumas Coisas" />
-    <MESSAGE value="Mergeado Moviments com Main, Criado novo branch para tela de Log e Branch para mais 1 padrão de Projeto" />
-    <MESSAGE value="Escopo Criado do Singleton para usar na criação do Tabuleiro.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Escopo Criado do Singleton para usar na criação do Tabuleiro.java" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="javax.persistence.PersistenceException" package="javax.persistence" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

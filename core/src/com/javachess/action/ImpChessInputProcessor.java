@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.javachess.board.Tabuleiro;
 import com.javachess.dao.LogXadrezDAO;
 
+import net.bytebuddy.asm.Advice.Exit;
+
 import java.sql.Time;
 import java.util.Date;
 import pieces.Piece;
@@ -29,8 +31,9 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
             pixY = getY*100;
             pixX = getX*100;
 
-            if(calculateTurn.isChecked(tabuleiro.isVezBranco()))
-                System.out.println("esta de Check");
+            
+
+        
 
             if(selectedPiece == null) { // é porque não tem nada selecionado
                 for (Piece[] peca : getPieces()) {
@@ -72,6 +75,14 @@ public class ImpChessInputProcessor extends ChessInputProcessor{
                         }
                     }
                 }//aqui eu reseto a imagem e retiro a seleçao na peça
+                if(calculateTurn.isChecked(tabuleiro.isVezBranco(),pieces)){
+                    System.out.println("CHECK");
+                    if(calculateTurn.isCheckedMate(getX, getY, tabuleiro.isVezBranco(),selectedPiece)){
+                        System.out.println("CHECK MATE");
+                        System.exit(0);
+                    }
+                }
+
                 selectedPiece.setFigure("piece/" + selectedPiece.getColor().name() + "_" + selectedPiece.getType() + ".png");
                 selectedPiece = null; // limpa para o proximo movimento
             }
