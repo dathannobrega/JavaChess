@@ -1,5 +1,6 @@
 package pieces.strategy;
 
+import com.javachess.action.CalculateTurn;
 import com.javachess.board.Tabuleiro;
 import pieces.Pawn;
 import pieces.Piece;
@@ -13,8 +14,8 @@ public class PawnMovementStrategy implements MovementStrategy{
 
         Pawn pawn = (Pawn)piece;
 
-        //if(CalculateTurn.isPieceBlocked(this,x/100,y/100))
-        //    return false;
+        if(CalculateTurn.isPieceBlocked(pawn, TARGETx/100, TARGETy/100))
+            return false;
 
         if (pawn.isFirst()) {
             if (pawn.getColor() == PieceType.Color.white) {
